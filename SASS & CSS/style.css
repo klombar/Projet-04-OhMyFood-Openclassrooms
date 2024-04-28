@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* VARIABLES */
 /* MIXIN */
 /* GENERAL */
@@ -248,7 +249,7 @@ img {
 
 .restaurants-cards {
   width: 340px;
-  height: 241px;
+  height: 251px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
   z-index: 500;
@@ -282,12 +283,25 @@ img {
   border-radius: 15px 15px 15px 15px;
 }
 
-.restaurants-cards img {
+.restaurants-cards-img {
   width: 100%;
-  height: 65%;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   -o-object-position: bottom;
      object-position: bottom;
+}
+
+.restaurant-cards-img-lanoteenchanté {
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+  -o-object-position: 0 -150px;
+     object-position: 0 -150px;
+}
+
+.position {
+  -o-object-position: 0 -150px;
+     object-position: 0 -150px;
 }
 
 .cards-body-content {
@@ -334,7 +348,7 @@ img {
 
 .fa-solid.fa-heart:active {
   opacity: 1;
-  transition: 1500ms ease;
+  transition: 1000ms ease;
 }
 
 .footer {
