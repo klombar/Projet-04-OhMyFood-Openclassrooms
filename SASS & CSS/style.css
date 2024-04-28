@@ -2,6 +2,10 @@
 /* VARIABLES */
 /* MIXIN */
 /* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 375px;
   margin: auto;
@@ -352,8 +356,8 @@ img {
 }
 
 .footer {
-  width: 325px;
-  height: 142px;
+  width: 375px;
+  height: 186px;
   display: flex;
   flex-direction: column;
   gap: 16px;
