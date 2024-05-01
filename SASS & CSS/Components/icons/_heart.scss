@@ -11,20 +11,21 @@
     }
 }
 
-.fa-regular.fa-heart{
+.regular-heart{
     position: absolute;
-    color: $primary-color;
+    color: #b160db;
     z-index: 1000;
 }
 
-.fa-solid.fa-heart{
+.solid-heart{
     position: absolute;
-    color: $primary-color;
+    color: #b160db;
     z-index: 2000;
     opacity: 0;
+    fill: url(#my-cool-gradient) ;
 }
 
-.fa-solid.fa-heart:active{
+.solid-heart:active{
     opacity: 1;
     transition: 300ms ease;
 }
@@ -42,3 +43,4 @@
         font-size: 20px;
     }
 }
+
