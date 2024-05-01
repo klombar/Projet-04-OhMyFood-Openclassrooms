@@ -231,6 +231,8 @@ body{
     position: absolute;
     top: 290px;
     border: 1px solid black;
+    background: #F6F6F6;
+
 }
 
 .main-header{
@@ -255,21 +257,21 @@ body{
     top: 50px;
 }
 
-.main-section-entrees{
+.main-section-entrees,
+.main-section-plats,
+.main-section-desserts{
     width: 349px;
     height: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main-section-entrees{
-    margin-top: 30px;
+    margin: 30px 0 20px 0;
+    gap: 12px;
 }
 
 .section-entrees-title{
-    text-align: start;
     width: 349px;
+    height: 30px;
     font-family: "roboto", sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -282,3 +284,76 @@ body{
     width: 40px;
     border: 2px solid #99E2D0;
 }
+
+.section-plats-title{
+    width: 349px;
+    height: 30px;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    position: relative;
+}
+
+.section-plats-title-border{
+    position: absolute;
+    top: 23px;
+    width: 40px;
+    border: 2px solid #99E2D0;
+}
+
+.section-desserts-title{
+    width: 349px;
+    height: 30px;
+    font-family: "roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    position: relative;
+}
+
+.section-desserts-title-border{
+    position: absolute;
+    top: 23px;
+    width: 40px;
+    border: 2px solid #99E2D0;
+}
+
+.section-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 349px;
+    height: 69px;
+    border-radius: 15px;
+    position: relative;
+    background-color: white;
+}
+
+.main-section-plats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.cards-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+    width: 310px;
+    height: 42px;
+
+}
+
+.cards-content-title{
+    @include titreh3;
+}
+
+.prix{
+    position: absolute;
+    top: 38px;
+    right: 13px;
+    font-size: 15px;
+    font-weight: 700;
+}
+    
