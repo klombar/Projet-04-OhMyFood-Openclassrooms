@@ -6,6 +6,7 @@
 @import "base/general/general";
 @import "components/buttons/_buttons.scss";
 @import "components/icons/heart";
+@import "components/coche";
 
 
 
@@ -216,7 +217,6 @@ body{
 .banniere{
     & img{
         height: 275px;
-        z-index: 1;
     }
 }
 
@@ -230,9 +230,7 @@ body{
     border-radius: 25px 25px 0 0;
     position: absolute;
     top: 290px;
-    border: 1px solid black;
     background: #F6F6F6;
-
 }
 
 .main-header{
@@ -241,21 +239,17 @@ body{
 }
 
 .main-header-title{
-    @include titreh1;
     display: flex;
     align-items: end;
     font-family: "Shrikhand";
     font-size: 28px;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 400;
     text-align: left;
     height: 100%;
 }
 
-.heart-menu{
-    right: 29px;
-    top: 50px;
-}
+
 
 .main-section-entrees,
 .main-section-plats,
@@ -319,15 +313,16 @@ body{
 
 .section-cards{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-wrap: nowrap;
     width: 349px;
     height: 69px;
     border-radius: 15px;
     position: relative;
     background-color: white;
     box-shadow: 0px 4px 15px 0px #00000026;
-
+    text-overflow: ellipsis;
 }
 
 .main-section-plats{
@@ -335,6 +330,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 12px;
+
 }
 
 .cards-content{
@@ -342,19 +338,33 @@ body{
     flex-direction: column;
     gap: 5px;
     margin-bottom: 5px;
-    width: 310px;
-    height: 42px;
-
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cards-content-title{
     @include titreh3;
+    width: 280px;
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+}
+
+.cards-content-subtitle{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 290px;
+    height: 20px;
+    white-space:nowrap;
 }
 
 .prix{
-    position: absolute;
-    top: 38px;
-    right: 13px;
+    display: flex;
+    align-items: end;
+    width: 27px;
+    height: 40px;
     font-size: 15px;
     font-weight: 700;
 }

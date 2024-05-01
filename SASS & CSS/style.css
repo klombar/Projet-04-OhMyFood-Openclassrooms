@@ -111,7 +111,15 @@
 }
 
 * {
+  font-family: "Roboto";
+  font-size: 15.04px;
+  font-weight: 300;
+  text-align: left;
+}
+
+* {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -121,7 +129,6 @@ a {
 body {
   width: 375px;
   margin: auto;
-  border: 1px solid black;
 }
 
 h3 {
@@ -168,6 +175,11 @@ img {
   font-size: 20px;
 }
 
+.heart-menu {
+  right: 29px;
+  top: 47px;
+}
+
 .regular-heart {
   position: absolute;
   color: #b160db;
@@ -197,6 +209,43 @@ img {
 }
 .heart-menu i {
   font-size: 20px;
+}
+
+.coche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 0px;
+  height: 69px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+}
+.coche i {
+  color: white;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.section-cards:active > .cards-content > .cards-content-title {
+  width: 240px;
+  height: 19px;
+  text-overflow: ellipsis;
+}
+.section-cards:active > .cards-content > .cards-content-subtitle {
+  width: 240px;
+  height: 19px;
+  text-overflow: ellipsis;
+}
+.section-cards:active > .coche {
+  width: 59px;
+  transition: all 250ms ease-out;
+}
+.section-cards:active > .prix {
+  right: 70px;
+  padding-right: 15px;
+  transition: all 250ms ease-out;
 }
 
 /* MOBILE FIRST */
@@ -424,7 +473,6 @@ body {
 
 .banniere img {
   height: 275px;
-  z-index: 1;
 }
 
 .main-container {
@@ -437,7 +485,6 @@ body {
   border-radius: 25px 25px 0 0;
   position: absolute;
   top: 290px;
-  border: 1px solid black;
   background: #F6F6F6;
 }
 
@@ -447,24 +494,14 @@ body {
 }
 
 .main-header-title {
-  font-family: "Shrikhand";
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 700;
-  text-align: left;
   display: flex;
   align-items: end;
   font-family: "Shrikhand";
   font-size: 28px;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   text-align: left;
   height: 100%;
-}
-
-.heart-menu {
-  right: 29px;
-  top: 50px;
 }
 
 .main-section-entrees,
@@ -529,14 +566,16 @@ body {
 
 .section-cards {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  flex-wrap: nowrap;
   width: 349px;
   height: 69px;
   border-radius: 15px;
   position: relative;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  text-overflow: ellipsis;
 }
 
 .main-section-plats {
@@ -551,20 +590,35 @@ body {
   flex-direction: column;
   gap: 5px;
   margin-bottom: 5px;
-  width: 310px;
-  height: 42px;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cards-content-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
+  width: 280px;
+  height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cards-content-subtitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 290px;
+  height: 20px;
+  white-space: nowrap;
 }
 
 .prix {
-  position: absolute;
-  top: 38px;
-  right: 13px;
+  display: flex;
+  align-items: end;
+  width: 27px;
+  height: 40px;
   font-size: 15px;
   font-weight: 700;
 }

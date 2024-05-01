@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -9,7 +10,6 @@ a{
 body{
     width: 375px;
     margin: auto;
-    border: 1px solid black;
 }
 
 h3{
@@ -20,3 +20,4 @@ img{
     object-fit: cover;
     width: 100%;
 }
+

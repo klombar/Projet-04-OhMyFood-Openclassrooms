@@ -1,0 +1,45 @@
+.coche{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width:0px ;
+    height:69px ;
+    background-color: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    right: 0px;
+    & i{
+        color: white;
+        font-size: 20px;
+        overflow: hidden;
+    }
+}
+
+.section-cards:active{
+    & > .cards-content{
+
+        & > .cards-content-title{
+            width: 240px;
+            height: 19px;
+            text-overflow: ellipsis;
+        }
+        & > .cards-content-subtitle{
+            width: 240px;
+            height: 19px;
+            text-overflow: ellipsis;
+        }
+    }
+    & > .coche{
+        width: 59px;
+        transition: all 250ms ease-out;
+    }
+    & > .prix{
+        right: 70px; 
+        padding-right: 15px;
+        transition: all 250ms ease-out;
+    }
+}
+
+
+
+
