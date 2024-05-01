@@ -10,7 +10,15 @@
     align-items: center;
 }
 
-@mixin titreH2{
+@mixin titreh1{
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 700;
+    text-align: left;
+}
+
+@mixin titreh2{
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -29,7 +37,7 @@
 }
 
 @mixin footerLinkFont{
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
 }

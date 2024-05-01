@@ -1,0 +1,58 @@
+.header{
+    @include directionRow;
+    position: relative;
+    height: 63px;
+    box-shadow: 0px 2px 4px 0px #00000026;
+}
+
+.header-return{
+    position: absolute;
+    left: 17px;
+    top: 17px;   
+    & i{
+        @include directionColumn;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.header-logo{
+    @include directionRow;
+    width: 197px;
+    height: 36px;
+}
+
+.header-logo img{
+    width: 162px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.header-location{
+    @include directionRow;
+    height: 50px;
+    background: rgba(234, 234, 234, 1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-location-input{
+    @include directionRow;
+    width: 109px;
+    height: 19px;
+    gap: 17px;
+}
+
+.header-location-input input{
+    width: 139px;
+    height: 19px;
+    border: none;
+    background-color: #EAEAEA;
+    @include titreh4;
+    color: rgba(53, 53, 53, 1);
+}
+
+.header-location-input i{
+    width: 12px;
+    height: 16px;
+}

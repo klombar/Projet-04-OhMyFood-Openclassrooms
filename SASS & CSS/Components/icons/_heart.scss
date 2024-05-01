@@ -1,0 +1,44 @@
+                                                                        /* Heart Page d'accueil */
+
+.heart{
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    & i{
+        font-size: 20px;
+    }
+}
+
+.fa-regular.fa-heart{
+    position: absolute;
+    color: $primary-color;
+    z-index: 1000;
+}
+
+.fa-solid.fa-heart{
+    position: absolute;
+    color: $primary-color;
+    z-index: 2000;
+    opacity: 0;
+}
+
+.fa-solid.fa-heart:active{
+    opacity: 1;
+    transition: 300ms ease;
+}
+
+
+                                                                        /* Heart Menu */
+
+.heart-menu{
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    & i{
+        font-size: 20px;
+    }
+}
