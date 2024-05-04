@@ -630,20 +630,20 @@ img {
 }
 
 /* MEDIA QUERIES tablet : 768px */
+/* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
   body {
     width: 768px;
-    border: 1px solid black;
   }
   .header {
     width: 768px;
   }
   .main {
     width: 768px;
-    border: 1px solid black;
   }
   .article {
     width: 768px;
+    height: 240px;
   }
   .article-title {
     width: 700px;
@@ -654,18 +654,23 @@ img {
   .article-btn {
     margin: 0;
   }
+  .main-fonctionnement {
+    height: 440px;
+  }
   .main-fonctionnement-title {
     width: 700px;
+    margin-top: 35px;
   }
   .main-fonctionnement-nav {
-    width: 450px;
+    width: 680px;
   }
   .main-restaurants {
     width: 768px;
-    height: 720px;
+    height: 650px;
   }
   #main-restaurants-title {
     width: 700px;
+    margin-top: 23px;
   }
   .main-restaurants-content {
     flex-direction: row;
@@ -680,11 +685,63 @@ img {
     align-items: end;
     flex-direction: row-reverse;
     gap: 16px;
-    background: rgb(53, 53, 53);
     padding-bottom: 20px;
+  }
+  .footer-logo {
+    padding: 0 20px 0 20px;
   }
   .footer .footer-content {
     flex-direction: row;
     align-items: center;
+  }
+  /* MENUS */
+  .layout-title-la-note-enchantee {
+    margin-top: 18px;
+  }
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+  .main-container {
+    width: 700px;
+    height: 1300px;
+  }
+  .main-header-title {
+    padding: 0 10px 0 10px;
+  }
+  .heart-menu {
+    right: 190px;
+  }
+  .main-section-entrees {
+    width: 700px;
+  }
+  .section-entrees-title,
+  .section-plats-title,
+  .section-desserts-title {
+    width: 645px;
+  }
+  .section-cards {
+    width: 645px;
+  }
+  .cards-content {
+    width: 600px;
+  }
+  .cards-content-title,
+  .cards-content-subtitle {
+    width: 600px;
+    text-overflow: unset;
+    overflow: unset;
+  }
+  .note-enchantee-main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 1415px;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    top: 290px;
+    background: #F6F6F6;
   }
 }/*# sourceMappingURL=style.css.map */
