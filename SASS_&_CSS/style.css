@@ -629,7 +629,7 @@ img {
   height: 351px;
 }
 
-/* MEDIA QUERIES tablet : 768px */
+/* MEDIA QUERIES tablet BETWEEN 768px and 1023.99px */
 /* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
   body {
@@ -743,5 +743,53 @@ img {
     position: absolute;
     top: 290px;
     background: #F6F6F6;
+  }
+}
+/* MEDIA QUERIES DESKTOP >= 1024px */
+@media screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+  .header {
+    width: 1024px;
+  }
+  .main {
+    width: 1024px;
+  }
+  .article {
+    width: 1024px;
+  }
+  .main-fonctionnement {
+    height: 230px;
+  }
+  .main-fonctionnement-title {
+    width: 945px;
+  }
+  .main-fonctionnement-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .main-fonctionnement-nav {
+    width: 290px;
+  }
+  .main-restaurants {
+    width: 1024px;
+  }
+  #main-restaurants-title {
+    width: 945px;
+  }
+  .main-restaurants-content {
+    gap: 40px;
+  }
+  .restaurants-cards {
+    width: 450px;
+  }
+  .restaurants-cards-badges {
+    left: 355px;
+  }
+  .footer {
+    width: 1024px;
+    justify-content: end;
   }
 }/*# sourceMappingURL=style.css.map */
