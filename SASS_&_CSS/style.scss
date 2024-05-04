@@ -47,8 +47,6 @@
     margin-top: 20px;
 }
 
-
-
 .main-fonctionnement{
     @include directionColumn;
     gap: 25px;
@@ -210,9 +208,6 @@
 
 
                                                                 /* MENU - LA PALETTE DU GOUT */
-body{
-    position: relative;
-}
 
 .banniere{
     & img{
@@ -243,13 +238,10 @@ body{
     align-items: end;
     font-family: "Shrikhand";
     font-size: 28px;
-    font-style: italic;
     font-weight: 400;
     text-align: left;
     height: 100%;
 }
-
-
 
 .main-section-entrees,
 .main-section-plats,
@@ -379,4 +371,88 @@ body{
 
 .note-enchantee-entrees-layout{
     height: 351px;
+}
+
+
+
+                                                                /* MEDIA QUERIES tablet : 768px */
+
+
+
+
+
+                                                                        /* PAGE dACCUEIL */
+@media screen and (min-width: 768px) {
+    body{
+        width: 768px;
+        border: 1px solid black;
+    }
+                                                                
+    .header{
+        width: 768px;
+    }
+                                                                
+    .main{
+        width: 768px;
+        border: 1px solid black;
+    }
+                                                                
+    .article{
+        width: 768px;
+    }
+                                                                
+    .article-title{
+        width: 700px;
+    }
+                                                                
+    .article-subtitle{
+        width: 700px;
+    }   
+
+    .article-btn{
+        margin: 0;
+    }
+
+    .main-fonctionnement-title{
+        width: 700px;
+    }
+
+    .main-fonctionnement-nav{
+        width: 450px;
+    }
+
+    .main-restaurants{
+        width: 768px;
+        height: 720px;
+    }
+
+    #main-restaurants-title{
+        width: 700px;
+    }
+
+    .main-restaurants-content{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer{
+        width: 768px;
+        justify-content: center;
+        height: 150px;
+        display: flex;
+        align-items: end;
+        flex-direction: row-reverse;
+        gap: 16px;
+        padding-bottom: 20px;
+    }
+
+    .footer-logo[
+        padding: 0 20px 0 20px;
+    ]
+
+    .footer .footer-content{
+        flex-direction: row;
+        align-items: center;
+    }
 }

@@ -1,7 +1,5 @@
 .coche{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include directionRow;
     position: absolute;
     width:0px ;
     height:69px ;
@@ -13,6 +11,10 @@
         font-size: 20px;
         overflow: hidden;
     }
+}
+
+.prix{
+    transform: translateX(0);
 }
 
 .section-cards:active{
@@ -33,10 +35,8 @@
         width: 59px;
         transition: all 250ms ease-out;
     }
-    & > .prix{
-        right: 70px; 
-        padding-right: 15px;
-        transition: all 250ms ease-out;
+    & > .prix{  
+
     }
 }
 
