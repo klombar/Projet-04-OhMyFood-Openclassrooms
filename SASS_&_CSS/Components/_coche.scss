@@ -1,6 +1,5 @@
 .coche{
     @include directionRow;
-    position: absolute;
     width:0px ;
     height:69px ;
     background-color: #99E2D0;
@@ -13,26 +12,26 @@
     }
 }
 
-.prix{
-    transform: translateX(0);
-}
 
-.section-cards:active{
+.section-cards:hover{
+    
     & > .cards-content{
 
         & > .cards-content-title{
             width: 240px;
             height: 19px;
+            overflow: hidden;
             text-overflow: ellipsis;
         }
         & > .cards-content-subtitle{
             width: 240px;
             height: 19px;
+            overflow: hidden;
             text-overflow: ellipsis;
         }
     }
     & > .coche{
-        width: 59px;
+        width: 70px;
         transition: all 250ms ease-out;
     }
     & > .prix{  

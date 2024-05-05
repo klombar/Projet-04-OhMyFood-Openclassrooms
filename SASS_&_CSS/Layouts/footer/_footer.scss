@@ -6,6 +6,7 @@
     gap: 16px;
     padding: 22px 25px 22px 25px;
     background: rgba(53, 53, 53, 1);
+    position: relative;
     .footer-logo{
         font-family: Shrikhand;
         font-size: 18px;
@@ -15,7 +16,8 @@
     .footer-content{
         @include directionColumn;
         align-items: start;
-        gap: 10px;
+        gap: 13px;
+        height: 25px;
         .footer-content-link{
             display: flex;
             gap: 13px;

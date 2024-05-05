@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* HEADER */
 .header {
   display: flex;
   justify-content: center;
@@ -7,7 +8,21 @@
   height: 63px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
+.header .header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 197px;
+  height: 36px;
+}
+.header .header-logo img {
+  width: 162px;
+  height: 44px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
+/* FLECHE DE RETOUR MENU DANS LE HEADER */
 .header-return {
   position: absolute;
   left: 17px;
@@ -22,21 +37,7 @@
   height: 30px;
 }
 
-.header-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 197px;
-  height: 36px;
-}
-
-.header-logo img {
-  width: 162px;
-  height: 44px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
+/* ZONE DE TEXTE LOCALISATION DE RESTAURANTS */
 .header-location {
   display: flex;
   justify-content: center;
@@ -45,7 +46,6 @@
   background: rgb(234, 234, 234);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
 .header-location-input {
   display: flex;
   justify-content: center;
@@ -54,7 +54,6 @@
   height: 19px;
   gap: 17px;
 }
-
 .header-location-input input {
   width: 139px;
   height: 19px;
@@ -65,8 +64,7 @@
   font-size: 16px;
   color: rgb(53, 53, 53);
 }
-
-.header-location-input i {
+.header-location i {
   width: 12px;
   height: 16px;
 }
@@ -79,6 +77,7 @@
   gap: 16px;
   padding: 22px 25px 22px 25px;
   background: rgb(53, 53, 53);
+  position: relative;
 }
 .footer .footer-logo {
   font-family: Shrikhand;
@@ -91,13 +90,14 @@
   flex-direction: column;
   align-items: center;
   align-items: start;
-  gap: 10px;
+  gap: 13px;
+  height: 25px;
 }
 .footer .footer-content .footer-content-link {
   display: flex;
   gap: 13px;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   text-align: left;
   color: white;
@@ -176,11 +176,6 @@ img {
   font-size: 20px;
 }
 
-.heart-menu {
-  right: 29px;
-  top: 47px;
-}
-
 .regular-heart {
   position: absolute;
   color: #b160db;
@@ -205,8 +200,8 @@ img {
   width: 22px;
   height: 21px;
   position: absolute;
-  right: 20px;
-  bottom: 30px;
+  right: 29px;
+  top: 47px;
 }
 .heart-menu i {
   font-size: 20px;
@@ -216,7 +211,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 0px;
   height: 69px;
   background-color: #99E2D0;
@@ -229,35 +223,43 @@ img {
   overflow: hidden;
 }
 
-.prix {
-  transform: translateX(0);
-}
-
-.section-cards:active > .cards-content > .cards-content-title {
+.section-cards:hover > .cards-content > .cards-content-title {
   width: 240px;
   height: 19px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
-.section-cards:active > .cards-content > .cards-content-subtitle {
+.section-cards:hover > .cards-content > .cards-content-subtitle {
   width: 240px;
   height: 19px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
-.section-cards:active > .coche {
-  width: 59px;
+.section-cards:hover > .coche {
+  width: 70px;
   transition: all 250ms ease-out;
 }
 /* MOBILE FIRST */
 /* PAGES D'ACCUEIL */
-.article {
+.main-la-note-enchantee {
+  height: 1175px;
+}
+
+main {
+  width: 100%;
+  height: 1950px;
+  display: flex;
+  flex-direction: column;
+}
+main .article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   height: 280px;
   background: rgba(234, 234, 234, 0.5);
 }
-
-.article-title {
+main .article .article-title {
   width: 275px;
   height: 68px;
   font-family: "roboto", sans-serif;
@@ -266,8 +268,7 @@ img {
   font-size: 24px;
   margin: 40px 0 0 0;
 }
-
-.article-subtitle {
+main .article .article-subtitle {
   text-align: center;
   width: 315px;
   height: 46px;
@@ -276,8 +277,7 @@ img {
   font-size: 18px;
   margin-bottom: 10px;
 }
-
-.article-btn {
+main .article .article-btn {
   width: 218px;
   height: 50px;
   margin-top: 20px;
@@ -290,7 +290,6 @@ img {
   gap: 25px;
   height: 460px;
 }
-
 .main-fonctionnement-title {
   display: flex;
   width: 340px;
@@ -299,6 +298,11 @@ img {
   font-weight: 700;
   font-size: 24px;
   margin-top: 50px;
+}
+.main-fonctionnement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .main-fonctionnement-nav {
@@ -465,7 +469,7 @@ img {
   font-size: 17px;
 }
 
-/* MENU - LA PALETTE DU GOUT */
+/* MENU */
 .banniere img {
   height: 275px;
 }
@@ -562,24 +566,14 @@ img {
   display: flex;
   justify-content: start;
   align-items: center;
-  flex-wrap: nowrap;
   width: 349px;
   height: 69px;
   border-radius: 15px;
   position: relative;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
-  text-overflow: ellipsis;
 }
-
-.main-section-plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.cards-content {
+.section-cards .cards-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -587,34 +581,33 @@ img {
   padding-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
 }
-
-.cards-content-title {
+.section-cards .cards-content .cards-content-title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  width: 280px;
   height: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
-
-.cards-content-subtitle {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 290px;
+.section-cards .cards-content .cards-content-subtitle {
   height: 20px;
-  white-space: nowrap;
 }
-
-.prix {
+.section-cards .prix {
   display: flex;
   align-items: end;
   width: 27px;
   height: 40px;
   font-size: 15px;
   font-weight: 700;
+  margin-right: 15px;
+}
+
+.main-section-plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .main-btn {
@@ -633,17 +626,18 @@ img {
 /* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
   body {
-    width: 768px;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    height: 1350px;
   }
   .header {
-    width: 768px;
-  }
-  .main {
-    width: 768px;
+    width: 100%;
   }
   .article {
-    width: 768px;
-    height: 240px;
+    width: 100%;
+    height: 280px;
   }
   .article-title {
     width: 700px;
@@ -661,11 +655,15 @@ img {
     width: 700px;
     margin-top: 35px;
   }
+  .main-fonctionnement-content {
+    display: flex;
+    flex-direction: column;
+  }
   .main-fonctionnement-nav {
     width: 680px;
   }
   .main-restaurants {
-    width: 768px;
+    width: 100%;
     height: 650px;
   }
   #main-restaurants-title {
@@ -678,14 +676,15 @@ img {
     justify-content: center;
   }
   .footer {
-    width: 768px;
-    justify-content: center;
+    width: 100%;
+    justify-content: end;
     height: 150px;
     display: flex;
     align-items: end;
     flex-direction: row-reverse;
     gap: 16px;
     padding-bottom: 20px;
+    position: relative;
   }
   .footer-logo {
     padding: 0 20px 0 20px;
@@ -698,46 +697,57 @@ img {
   .layout-title-la-note-enchantee {
     margin-top: 18px;
   }
-  .main {
-    display: flex;
+  .main-menu {
+    width: 100%;
+    height: 1100px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-la-note-enchantee {
+    flex-direction: row;
     justify-content: center;
   }
   .main-container {
-    width: 700px;
-    height: 1300px;
+    width: 80%;
+    height: 1150px;
   }
   .main-header-title {
     padding: 0 10px 0 10px;
   }
   .heart-menu {
-    right: 190px;
+    position: relative;
+    top: -30px;
+    left: 290px;
   }
-  .main-section-entrees {
-    width: 700px;
+  .main-section-entrees,
+  .main-section-plats,
+  .main-section-desserts {
+    width: 60%;
   }
   .section-entrees-title,
   .section-plats-title,
   .section-desserts-title {
-    width: 645px;
+    width: 100%;
   }
   .section-cards {
-    width: 645px;
+    width: 100%;
   }
-  .cards-content {
-    width: 600px;
+  .section-cards:hover > .cards-content > .cards-content-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
-  .cards-content-title,
-  .cards-content-subtitle {
-    width: 600px;
-    text-overflow: unset;
-    overflow: unset;
+  .section-cards:hover > .cards-content > .cards-content-subtitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .note-enchantee-main-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 700px;
-    height: 1415px;
+    height: 1300px;
     background-color: white;
     border-radius: 25px 25px 0 0;
     position: absolute;
@@ -748,16 +758,35 @@ img {
 /* MEDIA QUERIES DESKTOP >= 1024px */
 @media screen and (min-width: 1024px) {
   body {
-    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  .header {
-    width: 1024px;
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .main {
-    width: 1024px;
+  .banniere {
+    width: 100%;
+  }
+  .banniere img {
+    height: 383px;
+  }
+  main {
+    width: 100%;
+    height: 1160px;
   }
   .article {
-    width: 1024px;
+    width: 100%;
+  }
+  .main-container {
+    margin-top: 100px;
+  }
+  .note-enchantee-main-layout {
+    height: 1350px;
   }
   .main-fonctionnement {
     height: 230px;
@@ -767,19 +796,20 @@ img {
   }
   .main-fonctionnement-content {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    flex-direction: row;
   }
   .main-fonctionnement-nav {
     width: 290px;
   }
   .main-restaurants {
-    width: 1024px;
+    width: 100%;
   }
   #main-restaurants-title {
     width: 945px;
   }
   .main-restaurants-content {
+    width: 1200px;
     gap: 40px;
   }
   .restaurants-cards {
@@ -789,7 +819,41 @@ img {
     left: 355px;
   }
   .footer {
-    width: 1024px;
+    width: 100%;
     justify-content: end;
+  }
+  /* MENUS >= 1024px */
+  .main-container {
+    width: 80%;
+  }
+  .main-header {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-right: 40px;
+  }
+  .heart-menu {
+    position: relative;
+    top: 48px;
+    left: 15px;
+  }
+  .main-section-entrees,
+  .main-section-plats,
+  .main-section-desserts {
+    width: 60%;
+  }
+  .section-cards:hover > .cards-content > .cards-content-title {
+    width: 240px;
+    height: 19px;
+    overflow: unset;
+    text-overflow: unset;
+    white-space: nowrap;
+  }
+  .section-cards:hover > .cards-content > .cards-content-subtitle {
+    width: 240px;
+    height: 19px;
+    overflow: unset;
+    text-overflow: unset;
+    white-space: nowrap;
   }
 }/*# sourceMappingURL=style.css.map */

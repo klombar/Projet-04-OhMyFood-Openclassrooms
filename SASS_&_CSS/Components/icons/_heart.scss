@@ -11,11 +11,6 @@
     }
 }
 
-.heart-menu{
-    right: 29px;
-    top: 47px;
-}
-
 .regular-heart{
     position: absolute;
     color: #b160db;
@@ -27,7 +22,7 @@
     color: #b160db;
     z-index: 2000;
     opacity: 0;
-    fill: url(#my-cool-gradient) ;
+    fill: url(#my-cool-gradient);
 }
 
 .solid-heart:active{
@@ -42,8 +37,8 @@
     width: 22px;
     height: 21px;
     position: absolute;
-    right: 20px;
-    bottom: 30px;
+    right: 29px;
+    top: 47px;
     & i{
         font-size: 20px;
     }

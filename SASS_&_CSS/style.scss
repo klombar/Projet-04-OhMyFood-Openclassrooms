@@ -15,51 +15,68 @@
 
                                                                               /* PAGES D'ACCUEIL */
 
-.article{
-    @include directionColumn;
-    height: 280px;
-    background: rgba(234, 234, 234, 0.5);
+.main-la-note-enchantee{
+    height: 1175px
 }
 
-.article-title{
-    width: 275px;
-    height: 68px;
-    font-family: 'roboto', sans-serif;
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    margin: 40px 0 0 0;
-}
-
-.article-subtitle{
-    text-align: center;
-    width: 315px;
-    height: 46px;
-    font-family: 'roboto', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.article-btn{
-    width: 218px;
-    height: 50px;
-    margin-top: 20px;
+main{
+    width: 100%;
+    height: 1950px;
+    display: flex;
+    flex-direction: column;
+    .article{
+        @include directionColumn;
+        width: 100%;
+        height: 280px;
+        background: rgba(234, 234, 234, 0.5);
+        .article-title{
+            width: 275px;
+            height: 68px;
+            font-family: 'roboto', sans-serif;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            margin: 40px 0 0 0;
+        }
+        .article-subtitle{
+            text-align: center;
+            width: 315px;
+            height: 46px;
+            font-family: 'roboto', sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .article-btn{
+            width: 218px;
+            height: 50px;
+            margin-top: 20px;
+        }
+    }
+    
 }
 
 .main-fonctionnement{
     @include directionColumn;
     gap: 25px;
     height: 460px;
+    &-title{
+        display: flex;
+        width: 340px;
+        height: 31px;
+        @include titreh2;
+        margin-top: 50px
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: 30px
+    }
 }
 
-.main-fonctionnement-title{
-    display: flex;
-    width: 340px;
-    height: 31px;
-    @include titreh2;
-    margin-top: 50px
-}
+
+
+
 
 .main-fonctionnement-nav{
     @include directionRow;
@@ -207,7 +224,7 @@
 }
 
 
-                                                                /* MENU - LA PALETTE DU GOUT */
+                                                                /* MENU */
 
 .banniere{
     & img{
@@ -307,14 +324,39 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    flex-wrap: nowrap;
     width: 349px;
     height: 69px;
     border-radius: 15px;
     position: relative;
     background-color: white;
     box-shadow: 0px 4px 15px 0px #00000026;
-    text-overflow: ellipsis;
+    .cards-content{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 95%;
+        .cards-content-title{
+            @include titreh3;
+            height: 20px;
+        }
+        .cards-content-subtitle{
+            height: 20px;
+        }
+    }
+    .prix{
+        display: flex;
+        align-items: end;
+        width: 27px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 15px;
+    }
 }
 
 .main-section-plats{
@@ -322,43 +364,6 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-
-}
-
-.cards-content{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cards-content-title{
-    @include titreh3;
-    width: 280px;
-    height: 20px;
-    text-overflow: ellipsis;
-    white-space:nowrap;
-    overflow: hidden;
-}
-
-.cards-content-subtitle{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: 290px;
-    height: 20px;
-    white-space:nowrap;
-}
-
-.prix{
-    display: flex;
-    align-items: end;
-    width: 27px;
-    height: 40px;
-    font-size: 15px;
-    font-weight: 700;
 }
 
 .main-btn{
@@ -384,20 +389,21 @@
                                                                         /* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
     body{
-        width: 768px;
+        width: 100%;
     }
                                                                 
+    main {
+        width: 100%;
+        height: 1350px;
+    }
+    
     .header{
-        width: 768px;
+        width: 100%;
     }
-                                                                
-    .main{
-        width: 768px;
-    }
-                                                                
+                                                                                                                       
     .article{
-        width: 768px;
-        height: 240px;
+        width: 100%;
+        height: 280px;
     }
                                                                 
     .article-title{
@@ -412,6 +418,7 @@
         margin: 0;
     }
 
+
     .main-fonctionnement{
         height: 440px;
     }
@@ -421,12 +428,17 @@
         margin-top: 35px;
     }
 
+    .main-fonctionnement-content{
+        display: flex;
+        flex-direction: column;
+    }
+
     .main-fonctionnement-nav{
         width: 680px;
     }
 
     .main-restaurants{
-        width: 768px;
+        width: 100%;
         height: 650px;
     }
 
@@ -442,14 +454,15 @@
     }
 
     .footer{
-        width: 768px;
-        justify-content: center;
+        width: 100%;
+        justify-content: end;
         height: 150px;
         display: flex;
         align-items: end;
         flex-direction: row-reverse;
         gap: 16px;
         padding-bottom: 20px;
+        position: relative;
     }
 
     .footer-logo{
@@ -469,14 +482,21 @@
         margin-top: 18px;
     }
 
-    .main{
-        display: flex;
+    .main-menu{
+        width: 100%;
+        height: 1100px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .main-la-note-enchantee{
+        flex-direction: row;
         justify-content: center;
     }
 
     .main-container{
-        width: 700px;
-        height: 1300px;
+        width: 80%;
+        height: 1150px;
     }
 
     .main-header-title{
@@ -484,32 +504,42 @@
     }
 
     .heart-menu{
-        right: 190px;
+        position: relative;
+        top: -30px;
+        left: 290px;
     }
 
-    .main-section-entrees{
-        width: 700px;
+    .main-section-entrees,
+    .main-section-plats,
+    .main-section-desserts{
+        width: 60%;
     }
 
     .section-entrees-title,
     .section-plats-title,
     .section-desserts-title{
-        width: 645px;
+        width: 100%;
     }
 
     .section-cards{
-        width: 645px;
+        width: 100%;
     }
 
-    .cards-content{
-        width: 600px;
-    }
-
-    .cards-content-title,
-    .cards-content-subtitle{
-        width: 600px;
-        text-overflow: unset;
-        overflow: unset;
+    .section-cards:hover{
+        & > .cards-content{
+            & > .cards-content-title{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+    
+            }
+            & > .cards-content-subtitle{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+    
+            }
+        }
     }
 
     .note-enchantee-main-layout{
@@ -517,7 +547,7 @@
         flex-direction: column;
         align-items: center;
         width: 700px;
-        height: 1415px;
+        height: 1300px;
         background-color: white;
         border-radius: 25px 25px 0 0;
         position: absolute;
@@ -535,19 +565,41 @@
 @media screen and (min-width : 1024px) {
 
     body{
-        width: 1024px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
-    .header{
-        width: 1024px;
+    header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .main{
-        width: 1024px;
+    .banniere{
+        width: 100%;
+        img{
+            height: 383px;
+        }
+    }
+
+    main{
+        width: 100%;
+        height: 1160px;
     }
 
     .article{
-        width: 1024px;
+        width: 100%;
+    }
+
+    .main-container{
+        margin-top: 100px;
+    }
+
+    .note-enchantee-main-layout{
+        height: 1350px;
     }
 
     .main-fonctionnement{
@@ -560,8 +612,8 @@
 
     .main-fonctionnement-content{
         display: flex;
-        gap: 20px;
         justify-content: center;
+        flex-direction: row;
     }
 
     .main-fonctionnement-nav{
@@ -569,7 +621,7 @@
     }
 
     .main-restaurants{
-        width: 1024px;
+        width: 100%;
     }
 
     #main-restaurants-title{
@@ -577,6 +629,7 @@
     }
 
     .main-restaurants-content{
+        width: 1200px;
         gap: 40px;
     }
 
@@ -589,7 +642,52 @@
     }
 
     .footer{
-        width: 1024px;
+        width: 100%;
         justify-content: end;
+    }
+
+                                                                        /* MENUS >= 1024px */
+
+    .main-container{
+        width: 80%;
+    }
+
+    .main-header{
+        display: flex;
+        justify-content: center;
+        width: 60%;
+        margin-right: 40px;
+    }
+
+    .heart-menu{
+        position: relative;
+        top: 48px;
+        left: 15px;
+    }
+
+    .main-section-entrees,
+    .main-section-plats,
+    .main-section-desserts{
+        width: 60%;
+    }
+
+    .section-cards:hover{
+        & > .cards-content{
+    
+            & > .cards-content-title{
+                width: 240px;
+                height: 19px;
+                overflow: unset;
+                text-overflow: unset;
+                white-space: nowrap;
+            }
+            & > .cards-content-subtitle{
+                width: 240px;
+                height: 19px;
+                overflow: unset;
+                text-overflow: unset;
+                white-space: nowrap;
+            }
+        }
     }
 }
