@@ -11,6 +11,7 @@
 
 
 
+
                                                                                 /* MOBILE FIRST */
 
                                                                               /* PAGES D'ACCUEIL */
@@ -19,18 +20,57 @@
     height: 1175px
 }
 
-main{
+@keyframes animation-plats{
+
+    0%{
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 0.4;
+    }
+
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#main-menu{
+    display: flex;
+    height: 1100px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-header{
+    width: 60%;
+}
+
+.main-header-title{
+    justify-content: start;
     width: 100%;
-    height: 1950px;
+}
+
+.heart-menu{
+    position: relative;
+    top: -10px;
+    left: 30px;
+}
+
+.main{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     .article{
         @include directionColumn;
         width: 100%;
         height: 280px;
         background: rgba(234, 234, 234, 0.5);
         .article-title{
-            width: 275px;
+            width: 100%;
             height: 68px;
             font-family: 'roboto', sans-serif;
             text-align: center;
@@ -40,7 +80,7 @@ main{
         }
         .article-subtitle{
             text-align: center;
-            width: 315px;
+            width: 100%;
             height: 46px;
             font-family: 'roboto', sans-serif;
             font-weight: 300;
@@ -60,9 +100,10 @@ main{
     @include directionColumn;
     gap: 25px;
     height: 460px;
+    width: 100%;
     &-title{
         display: flex;
-        width: 340px;
+        width: 91%;
         height: 31px;
         @include titreh2;
         margin-top: 50px
@@ -70,52 +111,45 @@ main{
     &-content{
         display: flex;
         flex-direction: column;
-        gap: 30px
+        gap: 20px;
+        width: 90%;
     }
-}
-
-
-
-
-
-.main-fonctionnement-nav{
-    @include directionRow;
-    width: 322.49px;
-    height: 72.38px;
-    border-radius: 20px;
-    z-index: 500;
-    background: rgba(246, 246, 246, 1);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    position: relative
-}
-
-.main-fonctionnement-nav-numero{
-    @include directionRow;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    z-index: 1000;
-    background: rgba(147, 86, 220, 1);
-    color: rgba(255, 255, 255, 1);
-    font-size: 14.18px;
-}
-
-.main-fonctionnement-nav-text{
-    display: flex;
-    width: 211px;
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 20px;
-    @include titreh4;
-}
-
-.main-fonctionnement-nav-cygle{
-    display: flex;
-    font-size: 18px;
-    width: 18px;
-    height: 18px;
+    &-nav{
+        @include directionRow;
+        width: 100%;
+        height: 72.38px;
+        border-radius: 20px;
+        z-index: 500;
+        background: rgba(246, 246, 246, 1);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
+        &-numero{
+            @include directionRow;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            z-index: 1000;
+            background: rgba(147, 86, 220, 1);
+            color: rgba(255, 255, 255, 1);
+            font-size: 14.18px;
+        }
+        &-cygle{
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            height: 18px;
+            margin: 0 8% 0 8%;
+        }
+        &-text{
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 500;
+            @include titreh4;
+        }
+    }
 }
 
 .fa-store:before{
@@ -125,104 +159,97 @@ main{
 .main-restaurants{
     @include directionColumn;
     gap: 10px;
-    height: 1230px;
     background: rgba(246, 246, 246, 1);
-}
-
-#main-restaurants-title{
-    display: flex;
-    width: 340px;
-    height: 31px;
-    @include titreh2;
-    margin-top: 50px
-}
-
-.main-restaurants-content{
-    @include directionColumn;
-    gap: 18px;
-}
-
-.main-restaurants-cards{
-    @include directionColumn;
-    gap: 18px;
-    position: relative;
-    z-index: 500;
-    & a{
-        text-decoration:none;
-        color: black
+    padding-bottom: 50px;
+    width: 100%;
+    #main-restaurants-title{
+        display: flex;
+        width: 91%;
+        height: 31px;
+        @include titreh2;
+        margin-top: 50px
+    }
+    .main-restaurants-content{
+        @include directionColumn;
+        gap: 18px;
+        width: 91%;
+        max-width: 700px;
+    }
+    .main-restaurants-cards{
+        @include directionColumn;
+        gap: 18px;
+        position: relative;
+        z-index: 500;
+        width: 100%;
+        & a{
+            text-decoration:none;
+            color: black;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    .restaurants-cards-badges{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 80px;
+        height: 29px;
+        top: 8px;
+        right: 10px;
+        background-color: $tertiary-color;
+        color: rgba(0, 135, 102, 1);
+        border-radius: 2px;
+        z-index: 800;
+        font-family: "roboto", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        }
     }
 }
 
 .restaurants-cards{
-    width: 340px;
+    width: 100%;
     height: 251px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 15px 15px;
     z-index: 500;
     position: relative;
-}
+    .restaurants-cards-img{
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0 0;
 
-.restaurants-cards-badges{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 80px;
-    height: 29px;
-    top: 13px;
-    left: 247px;
-    background-color: $tertiary-color;
-    color: rgba(0, 135, 102, 1);
-    border-radius: 2px;
-    z-index: 800;
-    font-family: "roboto", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.restaurants-cards-body{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 0px 10px 0px 10px;
-    border-radius: 15px 15px 15px 15px;
-}
-
-.restaurants-cards-img{
-    width: 100%;
-    height: 70%;
-    border-radius: 15px 15px 0 0;
-    object-position: bottom;
+    }
+    .restaurants-cards-body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 0px 10px 0px 10px;
+        border-radius: 15px 15px 15px 15px;
+        .cards-body-content{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .cards-body-content-title{
+            @include titreh3;
+        }
+        .cards-body-content-subtitle{
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 17px;   
+        }
+    }
 }
 
 .restaurant-cards-img-lanoteenchanté{
     width: 100%;
     height: 70%;
     border-radius: 15px 15px 0 0;
-    object-position: 0 -150px;
-}
 
-.position{
-    object-position: 0 -150px;
 }
-
-.cards-body-content{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.cards-body-content-title{
-    @include titreh3;
-}
-
-.cards-body-content-subtitle{
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 17px;   
-}
-
 
                                                                 /* MENU */
 
@@ -236,7 +263,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: 1335px;
     background-color: white;
     border-radius: 25px 25px 0 0;
@@ -247,7 +274,7 @@ main{
 
 .main-header{
     height: 80px;
-    width: 349px
+    width: 88%;
 }
 
 .main-header-title{
@@ -260,20 +287,59 @@ main{
     height: 100%;
 }
 
-.main-section-entrees,
-.main-section-plats,
-.main-section-desserts{
-    width: 349px;
+.main-section-entrees{
+    width: 88%;
+    max-width: 634px;
     height: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px 0 20px 0;
     gap: 12px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-name: animation-plats;
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.main-section-plats{
+    width: 88%;
+    max-width: 634px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 20px 0;
+    gap: 12px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-name: animation-plats;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.main-section-desserts{
+    width: 88%;
+    max-width: 634px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 20px 0;
+    gap: 12px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation-name: animation-plats;
+    animation-delay: 0.5s;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
 }
 
 .section-entrees-title{
-    width: 349px;
+    width: 100%;
     height: 30px;
     font-family: "roboto", sans-serif;
     font-weight: 300;
@@ -289,7 +355,7 @@ main{
 }
 
 .section-plats-title{
-    width: 349px;
+    width: 100%;
     height: 30px;
     font-family: "roboto", sans-serif;
     font-weight: 300;
@@ -305,7 +371,7 @@ main{
 }
 
 .section-desserts-title{
-    width: 349px;
+    width: 100%;
     height: 30px;
     font-family: "roboto", sans-serif;
     font-weight: 300;
@@ -324,7 +390,7 @@ main{
     display: flex;
     justify-content: start;
     align-items: center;
-    width: 349px;
+    width: 100%;
     height: 69px;
     border-radius: 15px;
     position: relative;
@@ -394,7 +460,6 @@ main{
                                                                 
     main {
         width: 100%;
-        height: 1350px;
     }
     
     .header{
@@ -420,37 +485,43 @@ main{
 
 
     .main-fonctionnement{
-        height: 440px;
-    }
-
-    .main-fonctionnement-title{
-        width: 700px;
-        margin-top: 35px;
-    }
-
-    .main-fonctionnement-content{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .main-fonctionnement-nav{
-        width: 680px;
+        height: 230px;
+        &-title{
+            width: 95%;
+            margin-top: 35px;
+            max-width: 1080px;
+        }
+        &-content{
+            display: flex;
+            flex-direction: row;
+            width: 93%;
+            &-nav{
+                width: 100%;
+                &.main-fonctionnement-nav-cygle{
+                    padding: 0;
+                }
+            }
+        }
     }
 
     .main-restaurants{
         width: 100%;
-        height: 650px;
-    }
-
-    #main-restaurants-title{
-        width: 700px;
-        margin-top: 23px;
-    }
-
-    .main-restaurants-content{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        #main-restaurants-title{
+            margin-top: 23px;
+            width: 95%;
+            max-width: 1080px;
+        }
+        .main-restaurants-content{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 95%;
+            max-width: 1080px;
+            gap: 56px;
+            & .main-restaurants-cards{
+                width: 46%;
+            }
+        }
     }
 
     .footer{
@@ -463,6 +534,7 @@ main{
         gap: 16px;
         padding-bottom: 20px;
         position: relative;
+        padding-right: 1vw;
     }
 
     .footer-logo{
@@ -482,43 +554,39 @@ main{
         margin-top: 18px;
     }
 
-    .main-menu{
-        width: 100%;
-        height: 1100px;
-        flex-direction: row;
-        justify-content: center;
-    }
-
     .main-la-note-enchantee{
         flex-direction: row;
         justify-content: center;
     }
 
     .main-container{
-        width: 80%;
+        width: 100%;
+        max-width: 805.59px;
         height: 1150px;
     }
 
+
     .main-header-title{
-        padding: 0 10px 0 10px;
+        width: 100%;
+        justify-content: center;
     }
 
     .heart-menu{
         position: relative;
-        top: -30px;
-        left: 290px;
-    }
-
-    .main-section-entrees,
-    .main-section-plats,
-    .main-section-desserts{
-        width: 60%;
+        top: -10px;
+        left: 30px;
     }
 
     .section-entrees-title,
     .section-plats-title,
     .section-desserts-title{
         width: 100%;
+    }
+
+    .main-section-entrees,
+    .main-section-plats,
+    .main-section-desserts{
+        max-width: 634px;
     }
 
     .section-cards{
@@ -546,7 +614,8 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 700px;
+        width: 100%;
+        max-width: 805.59px;
         height: 1300px;
         background-color: white;
         border-radius: 25px 25px 0 0;
@@ -554,7 +623,6 @@ main{
         top: 290px;
         background: #F6F6F6;
     }
-
 }
 
 
@@ -587,7 +655,6 @@ main{
 
     main{
         width: 100%;
-        height: 1160px;
     }
 
     .article{
@@ -598,47 +665,50 @@ main{
         margin-top: 100px;
     }
 
-    .note-enchantee-main-layout{
-        height: 1350px;
-    }
-
     .main-fonctionnement{
         height: 230px;
+        &-title{
+            width: 95%px;
+        }
+        &-content{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1055px;
+            gap: 30px;
+        }
+        &-nav{
+            width: 100%;
+            justify-content: start;
+            padding-left: 40px;
+            &-cygle{
+                margin: 0 10% 0 0;
+            }
+        }
     }
 
-    .main-fonctionnement-title{
-        width: 945px;
-    }
-
-    .main-fonctionnement-content{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    .main-fonctionnement-nav{
-        width: 290px;
+    .note-enchantee-main-layout{
+        max-width: 1055px;
     }
 
     .main-restaurants{
         width: 100%;
-    }
-
-    #main-restaurants-title{
-        width: 945px;
-    }
-
-    .main-restaurants-content{
-        width: 1200px;
-        gap: 40px;
+        #main-restaurants-title{
+            width: 95%;
+        }
+        .main-restaurants-content{
+            width: 95%;
+            gap: 56px 76px;
+            max-width: 1080px;
+            & .main-restaurants-cards{
+                width: 46%;
+            }
+        }
     }
 
     .restaurants-cards{
-        width: 450px;
-    }
-
-    .restaurants-cards-badges{
-        left: 355px;
+        width: 100%;
     }
 
     .footer{
@@ -650,6 +720,7 @@ main{
 
     .main-container{
         width: 80%;
+        max-width: 1055px;
     }
 
     .main-header{
@@ -659,16 +730,21 @@ main{
         margin-right: 40px;
     }
 
+    .main-header-title{
+        width: 100%;
+    }
+
     .heart-menu{
         position: relative;
-        top: 48px;
-        left: 15px;
+        top: -10px;
+        left: 20px;
     }
 
     .main-section-entrees,
     .main-section-plats,
     .main-section-desserts{
-        width: 60%;
+        width: 79%;
+        max-width: 634px;
     }
 
     .section-cards:hover{

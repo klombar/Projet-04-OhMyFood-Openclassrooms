@@ -70,7 +70,7 @@
 }
 
 .footer {
-  width: 375px;
+  width: 100%;
   height: 186px;
   display: flex;
   flex-direction: column;
@@ -128,8 +128,9 @@ a {
 }
 
 body {
-  width: 375px;
-  margin: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
@@ -139,6 +140,8 @@ h3 {
 img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
 }
 
@@ -171,6 +174,7 @@ img {
   position: absolute;
   right: 20px;
   bottom: 30px;
+  z-index: 10000;
 }
 .heart i {
   font-size: 20px;
@@ -245,13 +249,48 @@ img {
   height: 1175px;
 }
 
-main {
+@keyframes animation-plats {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+#main-menu {
+  display: flex;
+  height: 1100px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-header {
+  width: 60%;
+}
+
+.main-header-title {
+  justify-content: start;
   width: 100%;
-  height: 1950px;
+}
+
+.heart-menu {
+  position: relative;
+  top: -10px;
+  left: 30px;
+}
+
+.main {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-main .article {
+.main .article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -259,8 +298,8 @@ main .article {
   height: 280px;
   background: rgba(234, 234, 234, 0.5);
 }
-main .article .article-title {
-  width: 275px;
+.main .article .article-title {
+  width: 100%;
   height: 68px;
   font-family: "roboto", sans-serif;
   text-align: center;
@@ -268,16 +307,16 @@ main .article .article-title {
   font-size: 24px;
   margin: 40px 0 0 0;
 }
-main .article .article-subtitle {
+.main .article .article-subtitle {
   text-align: center;
-  width: 315px;
+  width: 100%;
   height: 46px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 18px;
   margin-bottom: 10px;
 }
-main .article .article-btn {
+.main .article .article-btn {
   width: 218px;
   height: 50px;
   margin-top: 20px;
@@ -289,10 +328,11 @@ main .article .article-btn {
   align-items: center;
   gap: 25px;
   height: 460px;
+  width: 100%;
 }
 .main-fonctionnement-title {
   display: flex;
-  width: 340px;
+  width: 91%;
   height: 31px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -302,14 +342,14 @@ main .article .article-btn {
 .main-fonctionnement-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  width: 90%;
 }
-
 .main-fonctionnement-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 322.49px;
+  width: 100%;
   height: 72.38px;
   border-radius: 20px;
   z-index: 500;
@@ -317,7 +357,6 @@ main .article .article-btn {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   position: relative;
 }
-
 .main-fonctionnement-nav-numero {
   display: flex;
   justify-content: center;
@@ -326,29 +365,27 @@ main .article .article-btn {
   height: 24px;
   border-radius: 50%;
   position: absolute;
-  left: -10px;
+  left: -15px;
   z-index: 1000;
   background: rgb(147, 86, 220);
   color: rgb(255, 255, 255);
   font-size: 14.18px;
 }
-
+.main-fonctionnement-nav-cygle {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  height: 18px;
+  margin: 0 8% 0 8%;
+}
 .main-fonctionnement-nav-text {
   display: flex;
-  width: 211px;
+  justify-content: center;
   font-size: 16px;
   font-weight: 500;
-  padding-left: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-}
-
-.main-fonctionnement-nav-cygle {
-  display: flex;
-  font-size: 18px;
-  width: 18px;
-  height: 18px;
 }
 
 .fa-store:before {
@@ -360,58 +397,52 @@ main .article .article-btn {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 1230px;
   background: rgb(246, 246, 246);
+  padding-bottom: 50px;
+  width: 100%;
 }
-
-#main-restaurants-title {
+.main-restaurants #main-restaurants-title {
   display: flex;
-  width: 340px;
+  width: 91%;
   height: 31px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
   margin-top: 50px;
 }
-
-.main-restaurants-content {
+.main-restaurants .main-restaurants-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  width: 91%;
+  max-width: 700px;
 }
-
-.main-restaurants-cards {
+.main-restaurants .main-restaurants-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
   position: relative;
   z-index: 500;
+  width: 100%;
 }
-.main-restaurants-cards a {
+.main-restaurants .main-restaurants-cards a {
   text-decoration: none;
   color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-.restaurants-cards {
-  width: 340px;
-  height: 251px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 15px 15px;
-  z-index: 500;
-  position: relative;
-}
-
-.restaurants-cards-badges {
+.main-restaurants .main-restaurants-cards .restaurants-cards-badges {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: 80px;
   height: 29px;
-  top: 13px;
-  left: 247px;
+  top: 8px;
+  right: 10px;
   background-color: #99E2D0;
   color: rgb(0, 135, 102);
   border-radius: 2px;
@@ -421,7 +452,20 @@ main .article .article-btn {
   font-size: 14px;
 }
 
-.restaurants-cards-body {
+.restaurants-cards {
+  width: 100%;
+  height: 251px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+  z-index: 500;
+  position: relative;
+}
+.restaurants-cards .restaurants-cards-img {
+  width: 100%;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants-cards .restaurants-cards-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -429,44 +473,26 @@ main .article .article-btn {
   padding: 0px 10px 0px 10px;
   border-radius: 15px 15px 15px 15px;
 }
-
-.restaurants-cards-img {
-  width: 100%;
-  height: 70%;
-  border-radius: 15px 15px 0 0;
-  -o-object-position: bottom;
-     object-position: bottom;
+.restaurants-cards .restaurants-cards-body .cards-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.restaurants-cards .restaurants-cards-body .cards-body-content-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.restaurants-cards .restaurants-cards-body .cards-body-content-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .restaurant-cards-img-lanoteenchanté {
   width: 100%;
   height: 70%;
   border-radius: 15px 15px 0 0;
-  -o-object-position: 0 -150px;
-     object-position: 0 -150px;
-}
-
-.position {
-  -o-object-position: 0 -150px;
-     object-position: 0 -150px;
-}
-
-.cards-body-content {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.cards-body-content-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.cards-body-content-subtitle {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 17px;
 }
 
 /* MENU */
@@ -478,7 +504,7 @@ main .article .article-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 375px;
+  width: 100%;
   height: 1335px;
   background-color: white;
   border-radius: 25px 25px 0 0;
@@ -489,7 +515,7 @@ main .article .article-btn {
 
 .main-header {
   height: 80px;
-  width: 349px;
+  width: 88%;
 }
 
 .main-header-title {
@@ -502,20 +528,59 @@ main .article .article-btn {
   height: 100%;
 }
 
-.main-section-entrees,
-.main-section-plats,
-.main-section-desserts {
-  width: 349px;
+.main-section-entrees {
+  width: 88%;
+  max-width: 634px;
   height: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px 0 20px 0;
   gap: 12px;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-name: animation-plats;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.main-section-plats {
+  width: 88%;
+  max-width: 634px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 20px 0;
+  gap: 12px;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-name: animation-plats;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.main-section-desserts {
+  width: 88%;
+  max-width: 634px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 20px 0;
+  gap: 12px;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation-name: animation-plats;
+  animation-delay: 0.5s;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
 }
 
 .section-entrees-title {
-  width: 349px;
+  width: 100%;
   height: 30px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
@@ -531,7 +596,7 @@ main .article .article-btn {
 }
 
 .section-plats-title {
-  width: 349px;
+  width: 100%;
   height: 30px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
@@ -547,7 +612,7 @@ main .article .article-btn {
 }
 
 .section-desserts-title {
-  width: 349px;
+  width: 100%;
   height: 30px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
@@ -566,7 +631,7 @@ main .article .article-btn {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 349px;
+  width: 100%;
   height: 69px;
   border-radius: 15px;
   position: relative;
@@ -630,7 +695,6 @@ main .article .article-btn {
   }
   main {
     width: 100%;
-    height: 1350px;
   }
   .header {
     width: 100%;
@@ -649,31 +713,42 @@ main .article .article-btn {
     margin: 0;
   }
   .main-fonctionnement {
-    height: 440px;
+    height: 230px;
   }
   .main-fonctionnement-title {
-    width: 700px;
+    width: 95%;
     margin-top: 35px;
+    max-width: 1080px;
   }
   .main-fonctionnement-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 93%;
   }
-  .main-fonctionnement-nav {
-    width: 680px;
+  .main-fonctionnement-content-nav {
+    width: 100%;
+  }
+  .main-fonctionnement-content-nav.main-fonctionnement-nav-cygle {
+    padding: 0;
   }
   .main-restaurants {
     width: 100%;
-    height: 650px;
   }
-  #main-restaurants-title {
-    width: 700px;
+  .main-restaurants #main-restaurants-title {
     margin-top: 23px;
+    width: 95%;
+    max-width: 1080px;
   }
-  .main-restaurants-content {
+  .main-restaurants .main-restaurants-content {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1080px;
+    gap: 56px;
+  }
+  .main-restaurants .main-restaurants-content .main-restaurants-cards {
+    width: 46%;
   }
   .footer {
     width: 100%;
@@ -685,6 +760,7 @@ main .article .article-btn {
     gap: 16px;
     padding-bottom: 20px;
     position: relative;
+    padding-right: 1vw;
   }
   .footer-logo {
     padding: 0 20px 0 20px;
@@ -697,37 +773,33 @@ main .article .article-btn {
   .layout-title-la-note-enchantee {
     margin-top: 18px;
   }
-  .main-menu {
-    width: 100%;
-    height: 1100px;
-    flex-direction: row;
-    justify-content: center;
-  }
   .main-la-note-enchantee {
     flex-direction: row;
     justify-content: center;
   }
   .main-container {
-    width: 80%;
+    width: 100%;
+    max-width: 805.59px;
     height: 1150px;
   }
   .main-header-title {
-    padding: 0 10px 0 10px;
+    width: 100%;
+    justify-content: center;
   }
   .heart-menu {
     position: relative;
-    top: -30px;
-    left: 290px;
-  }
-  .main-section-entrees,
-  .main-section-plats,
-  .main-section-desserts {
-    width: 60%;
+    top: -10px;
+    left: 30px;
   }
   .section-entrees-title,
   .section-plats-title,
   .section-desserts-title {
     width: 100%;
+  }
+  .main-section-entrees,
+  .main-section-plats,
+  .main-section-desserts {
+    max-width: 634px;
   }
   .section-cards {
     width: 100%;
@@ -746,7 +818,8 @@ main .article .article-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;
+    width: 100%;
+    max-width: 805.59px;
     height: 1300px;
     background-color: white;
     border-radius: 25px 25px 0 0;
@@ -777,7 +850,6 @@ main .article .article-btn {
   }
   main {
     width: 100%;
-    height: 1160px;
   }
   .article {
     width: 100%;
@@ -785,38 +857,47 @@ main .article .article-btn {
   .main-container {
     margin-top: 100px;
   }
-  .note-enchantee-main-layout {
-    height: 1350px;
-  }
   .main-fonctionnement {
     height: 230px;
   }
   .main-fonctionnement-title {
-    width: 945px;
+    width: 95% px;
   }
   .main-fonctionnement-content {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    width: 100%;
+    max-width: 1055px;
+    gap: 30px;
   }
   .main-fonctionnement-nav {
-    width: 290px;
+    width: 100%;
+    justify-content: start;
+    padding-left: 40px;
+  }
+  .main-fonctionnement-nav-cygle {
+    margin: 0 10% 0 0;
+  }
+  .note-enchantee-main-layout {
+    max-width: 1055px;
   }
   .main-restaurants {
     width: 100%;
   }
-  #main-restaurants-title {
-    width: 945px;
+  .main-restaurants #main-restaurants-title {
+    width: 95%;
   }
-  .main-restaurants-content {
-    width: 1200px;
-    gap: 40px;
+  .main-restaurants .main-restaurants-content {
+    width: 95%;
+    gap: 56px 76px;
+    max-width: 1080px;
+  }
+  .main-restaurants .main-restaurants-content .main-restaurants-cards {
+    width: 46%;
   }
   .restaurants-cards {
-    width: 450px;
-  }
-  .restaurants-cards-badges {
-    left: 355px;
+    width: 100%;
   }
   .footer {
     width: 100%;
@@ -825,6 +906,7 @@ main .article .article-btn {
   /* MENUS >= 1024px */
   .main-container {
     width: 80%;
+    max-width: 1055px;
   }
   .main-header {
     display: flex;
@@ -832,15 +914,19 @@ main .article .article-btn {
     width: 60%;
     margin-right: 40px;
   }
+  .main-header-title {
+    width: 100%;
+  }
   .heart-menu {
     position: relative;
-    top: 48px;
-    left: 15px;
+    top: -10px;
+    left: 20px;
   }
   .main-section-entrees,
   .main-section-plats,
   .main-section-desserts {
-    width: 60%;
+    width: 79%;
+    max-width: 634px;
   }
   .section-cards:hover > .cards-content > .cards-content-title {
     width: 240px;
