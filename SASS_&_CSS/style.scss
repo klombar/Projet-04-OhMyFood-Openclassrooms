@@ -1,5 +1,5 @@
 @import "Utils/Variables/variables";
-@import "Utils/Variables/mixins";
+@import "Utils/mixins/mixins";
 @import "Layouts/header/header";
 @import "Layouts/footer/footer";
 @import "Base/Fonts/fonts";
@@ -21,17 +21,57 @@
 }
 
 .animation-chargement{
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 1466px;
+    height: 2258px;
     background-color: black;
     z-index: 44687619874;
     animation-name: animation-chargement;
     animation-fill-mode: forwards;
     animation-delay: 1s;
-    animation-duration: 3.5s;
+    animation-duration: 1.5s;
+    &-fork-knife{
+        position: sticky;
+        z-index: 487845648976867648;
+        font-size: 30px;
+        width: 35%;
+        height: 25%;
+        margin-left: 37%;
+        fill: url(#svg-gradient);
+        opacity: 1;
+        transform: rotate(0), translateX(0);
+        animation-name: animation-chargement-fork-knife;
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    &-title{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 19%;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        &-text{
+            position: sticky;
+            color: #99E2D0;
+            font-family: "shrikhand", sans-serif;
+            font-size: 45px;
+            font-weight: 800;
+            text-align: center;
+        }
+    }
 }
 
+
+
+                                                    /* ANIMATION AVEC @KEYFRAMES */
+
+
+
+
+                                        /* ANIMATIONS AUX CHARGEMENTS DE LA PAGE D'ACCUEIL */
 @keyframes animation-chargement{
 
     0%{
@@ -40,9 +80,26 @@
 
     100%{
         opacity: 0;
-        z-index: -1;
+        z-index: -2;
     }
 }
+
+@keyframes animation-chargement-fork-knife{
+
+    0%{
+        z-index: 454545454545454545454545454545;
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(720deg);
+        z-index: -2;
+        opacity: 0;
+    }
+}
+
+
+
 
 @keyframes animation-plats{
 
@@ -136,7 +193,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        width: 90%;
+        width: 86%;
     }
     &-nav{
         @include directionRow;
@@ -153,7 +210,7 @@
             height: 24px;
             border-radius: 50%;
             position: absolute;
-            left: -15px;
+            left: -11px;
             z-index: 1000;
             background: rgba(147, 86, 220, 1);
             color: rgba(255, 255, 255, 1);
@@ -304,7 +361,7 @@
 .main-header-title{
     display: flex;
     align-items: end;
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", sans-serif;
     font-size: 28px;
     font-weight: 400;
     text-align: left;
@@ -478,6 +535,22 @@
 
                                                                         /* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
+
+                                                                        /* ANIMATIONS  */
+
+
+
+    .animation-chargement{
+        height: 1465px;
+        &-fork-knife{
+            height: 40%;
+            width: 25%;
+        }
+        &-title{
+            top: 32%;
+        }
+    }
+
     body{
         width: 100%;
     }
@@ -595,12 +668,6 @@
         justify-content: center;
     }
 
-    .heart-menu{
-        position: relative;
-        top: -10px;
-        left: 30px;
-    }
-
     .section-entrees-title,
     .section-plats-title,
     .section-desserts-title{
@@ -656,6 +723,20 @@
 
 @media screen and (min-width : 1024px) {
 
+
+
+    .animation-chargement{
+        height: 1465px;
+        &-fork-knife{
+            width: 22%;
+            margin-left: 40%;
+            height: 58%;
+        }
+        &-title{
+            top: 45%;
+        }
+    }
+
     body{
         display: flex;
         flex-direction: column;
@@ -698,7 +779,7 @@
             display: flex;
             justify-content: center;
             flex-direction: row;
-            width: 100%;
+            width: 93%;
             max-width: 1055px;
             gap: 30px;
         }
@@ -756,12 +837,6 @@
 
     .main-header-title{
         width: 100%;
-    }
-
-    .heart-menu{
-        position: relative;
-        top: -10px;
-        left: 20px;
     }
 
     .main-section-entrees,

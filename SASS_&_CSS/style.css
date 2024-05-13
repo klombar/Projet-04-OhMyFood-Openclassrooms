@@ -191,7 +191,7 @@ img {
   color: #b160db;
   z-index: 2000;
   opacity: 0;
-  fill: url(#my-cool-gradient);
+  fill: url(#svg-gradient);
 }
 
 .solid-heart:active {
@@ -250,24 +250,69 @@ img {
 }
 
 .animation-chargement {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 1466px;
+  height: 2258px;
   background-color: black;
   z-index: 44687619874;
   animation-name: animation-chargement;
   animation-fill-mode: forwards;
   animation-delay: 1s;
-  animation-duration: 3.5s;
+  animation-duration: 1.5s;
+}
+.animation-chargement-fork-knife {
+  position: sticky;
+  z-index: 487845648976867650;
+  font-size: 30px;
+  width: 35%;
+  height: 25%;
+  margin-left: 37%;
+  fill: url(#svg-gradient);
+  opacity: 1;
+  transform: rotate(0), translateX(0);
+  animation-name: animation-chargement-fork-knife;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.animation-chargement-title {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 19%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.animation-chargement-title-text {
+  position: sticky;
+  color: #99E2D0;
+  font-family: "shrikhand", sans-serif;
+  font-size: 45px;
+  font-weight: 800;
+  text-align: center;
 }
 
+/* ANIMATION AVEC @KEYFRAMES */
+/* ANIMATIONS AUX CHARGEMENTS DE LA PAGE D'ACCUEIL */
 @keyframes animation-chargement {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: -2;
+  }
+}
+@keyframes animation-chargement-fork-knife {
+  0% {
+    z-index: 454545454545454560000000000000;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(720deg);
+    z-index: -2;
+    opacity: 0;
   }
 }
 @keyframes animation-plats {
@@ -364,7 +409,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
+  width: 86%;
 }
 .main-fonctionnement-nav {
   display: flex;
@@ -386,7 +431,7 @@ img {
   height: 24px;
   border-radius: 50%;
   position: absolute;
-  left: -15px;
+  left: -11px;
   z-index: 1000;
   background: rgb(147, 86, 220);
   color: rgb(255, 255, 255);
@@ -542,7 +587,7 @@ img {
 .main-header-title {
   display: flex;
   align-items: end;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: 400;
   text-align: left;
@@ -711,6 +756,17 @@ img {
 /* MEDIA QUERIES tablet BETWEEN 768px and 1023.99px */
 /* PAGE dACCUEIL */
 @media screen and (min-width: 768px) {
+  /* ANIMATIONS  */
+  .animation-chargement {
+    height: 1465px;
+  }
+  .animation-chargement-fork-knife {
+    height: 40%;
+    width: 25%;
+  }
+  .animation-chargement-title {
+    top: 32%;
+  }
   body {
     width: 100%;
   }
@@ -807,11 +863,6 @@ img {
     width: 100%;
     justify-content: center;
   }
-  .heart-menu {
-    position: relative;
-    top: -10px;
-    left: 30px;
-  }
   .section-entrees-title,
   .section-plats-title,
   .section-desserts-title {
@@ -851,6 +902,17 @@ img {
 }
 /* MEDIA QUERIES DESKTOP >= 1024px */
 @media screen and (min-width: 1024px) {
+  .animation-chargement {
+    height: 1465px;
+  }
+  .animation-chargement-fork-knife {
+    width: 22%;
+    margin-left: 40%;
+    height: 58%;
+  }
+  .animation-chargement-title {
+    top: 45%;
+  }
   body {
     display: flex;
     flex-direction: column;
@@ -888,7 +950,7 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 100%;
+    width: 93%;
     max-width: 1055px;
     gap: 30px;
   }
@@ -937,11 +999,6 @@ img {
   }
   .main-header-title {
     width: 100%;
-  }
-  .heart-menu {
-    position: relative;
-    top: -10px;
-    left: 20px;
   }
   .main-section-entrees,
   .main-section-plats,
