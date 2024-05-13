@@ -35,11 +35,11 @@
                                                                         /* Heart Menu */
 
 .heart-menu{
+    position: relative;
     width: 22px;
     height: 21px;
-    position: absolute;
-    right: 29px;
-    top: 47px;
+    top: -10px;
+    left: 20px;
     & i{
         font-size: 20px;
     }

@@ -18,14 +18,10 @@
     & > .cards-content{
 
         & > .cards-content-title{
-            width: 240px;
-            height: 19px;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         & > .cards-content-subtitle{
-            width: 240px;
-            height: 19px;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -34,9 +30,7 @@
         width: 70px;
         transition: all 250ms ease-out;
     }
-    & > .prix{  
 
-    }
 }
 
 
