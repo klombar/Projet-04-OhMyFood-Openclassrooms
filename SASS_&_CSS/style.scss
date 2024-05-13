@@ -48,7 +48,7 @@
     }
 
     100%{
-        transform: rotate(720deg);
+        transform: rotate(1080deg);
         z-index: -2;
         opacity: 0;
     }
@@ -71,21 +71,21 @@
         z-index: 487845648976867648;
         font-size: 30px;
         width: 35%;
-        height: 25%;
+        height: 30%;
         margin-left: 33%;
         fill: url(#svg-gradient);
         opacity: 1;
         transform: rotate(0), translateX(0);
         animation-name: animation-chargement-fork-knife;
-        animation-delay: 0.5s;
-        animation-duration: 2s;
+        animation-delay: 0.1s;
+        animation-duration: 3s;
         animation-fill-mode: forwards;
     }
     &-title{
         display: flex;
         justify-content: center;
         position: absolute;
-        top: 16%;
+        top: 25%;
         width: 100%;
         text-align: center;
         padding: 20px;
@@ -134,6 +134,10 @@
 
 
 
+
+
+
+
 #main-menu{
     display: flex;
     height: 1100px;
@@ -147,6 +151,12 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+
+                                                        /* ARTICLE UNDER 768PX */
+
+
 
 .article{
     @include directionColumn;
@@ -177,6 +187,15 @@
         margin-top: 20px;
     }
 }  
+
+
+
+
+                                                        /* MAIN-FONCTIONNEMENT UNDER 768PX */
+
+
+
+
 
 .main-fonctionnement{
     @include directionColumn;
@@ -236,6 +255,15 @@
         }
     }
 }
+
+
+
+
+
+                                                    /* MAIN-RESTAURANT UNDER 768PX */
+
+
+
 
 .main-restaurants{
     @include directionColumn;
@@ -325,6 +353,12 @@
     }
 }
 
+
+                                /* IMAGE DE LA CARTE DU RESTAURANT DE LA NOTE ENCHANTEE DE LA PAGE D'ACCUEIL */
+
+
+
+
 .restaurant-cards-img-lanoteenchanté{
     width: 100%;
     height: 70%;
@@ -332,12 +366,21 @@
 
 }
 
-                                                                /* MENU */
+
+
+                                                            /* MENU UNDER 768PX*/
+
+
+
 
 .banniere{
     & img{
         height: 275px;
     }
+}
+
+.main-la-note-enchantee{
+    height: 1180px;
 }
 
 .main-container{
@@ -351,23 +394,21 @@
     position: absolute;
     top: 290px;
     background: #F6F6F6;
-}
-
-.main-header{
-    height: 80px;
-    width: 88%;
-}
-
-.main-header-title{
-    display: flex;
-    align-items: end;
-    font-family: "Shrikhand", sans-serif;
-    font-size: 28px;
-    font-weight: 400;
-    text-align: left;
-    height: 100%;
-    width: 93%;
-    justify-content: space-between;
+    &-header{
+        height: 80px;
+        width: 88%;
+        &-title{
+            display: flex;
+            align-items: end;
+            font-family: "Shrikhand", sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            text-align: left;
+            height: 100%;
+            width: 93%;
+            justify-content: space-between;
+        }
+    }
 }
 
 .main-section-entrees{
@@ -508,13 +549,6 @@
     }
 }
 
-.main-section-plats{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-}
-
 .main-btn{
     margin: 20px 0px 40px 0px;
 }
@@ -552,6 +586,9 @@
         &-title{
             top: 32%;
             font-size: 100px;
+            &-text{
+                font-size: 60px;
+            }
         }
     }
                                                                                                                        
@@ -658,7 +695,7 @@
     }
 
 
-    .main-header-title{
+    .main-container-header-title{
         width: 100%;
         justify-content: center;
     }
@@ -725,10 +762,13 @@
         &-fork-knife{
             width: 22%;
             margin-left: 40%;
-            height: 58%;
+            height: 50%;
         }
         &-title{
-            top: 45%;
+            top: 40%;
+            &-text{
+                font-size: 80px;
+            }
         }
     }
 
@@ -823,14 +863,14 @@
         max-width: 1055px;
     }
 
-    .main-header{
+    .main-container-header{
         display: flex;
         justify-content: center;
         width: 60%;
         margin-right: 40px;
     }
 
-    .main-header-title{
+    .main-container-header-title{
         width: 100%;
     }
 
