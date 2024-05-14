@@ -6,7 +6,7 @@
 @import "base/general/general";
 @import "components/buttons/_buttons.scss";
 @import "components/icons/heart";
-@import "components/coche";
+@import "components/icons/coche";
 
 
 
@@ -57,6 +57,9 @@
 
 
 .animation-chargement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     width: 100%;
     height: 2258px;
@@ -68,14 +71,12 @@
     animation-duration: 1.5s;
     &-fork-knife{
         position: sticky;
+        margin-top: 40%;
+        width: 180px;
         z-index: 487845648976867648;
         font-size: 30px;
-        width: 35%;
-        height: 30%;
-        margin-left: 33%;
         fill: url(#svg-gradient);
         opacity: 1;
-        transform: rotate(0), translateX(0);
         animation-name: animation-chargement-fork-knife;
         animation-delay: 0.1s;
         animation-duration: 3s;
@@ -84,8 +85,7 @@
     &-title{
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: 25%;
+        margin-top: 40px;
         width: 100%;
         text-align: center;
         padding: 20px;
@@ -166,7 +166,7 @@
     .article-title{
         width: 100%;
         height: 68px;
-        font-family: 'roboto', sans-serif;
+        font-family: 'shrikhand', sans-serif;
         text-align: center;
         font-weight: 700;
         font-size: 24px;
@@ -251,7 +251,7 @@
             justify-content: center;
             font-size: 16px;
             font-weight: 500;
-            @include titreh4;
+            @include titreh4
         }
     }
 }
@@ -400,9 +400,7 @@
         &-title{
             display: flex;
             align-items: end;
-            font-family: "Shrikhand", sans-serif;
-            font-size: 28px;
-            font-weight: 400;
+            @include titreh1;
             text-align: left;
             height: 100%;
             width: 93%;
@@ -426,6 +424,15 @@
     animation-delay: 0.5s;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    &-title{
+        width: 100%;
+        height: 30px;
+        @include titreh3;
+        position: relative;
+        &-border{
+            @include borderBottomGreen;
+        }
+    }
 }
 
 .main-section-plats{
@@ -443,6 +450,15 @@
     animation-delay: 0.5s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    &-title{
+        width: 100%;
+        height: 30px;
+        @include titreh3;
+        position: relative;
+        &-border{
+            @include borderBottomGreen;
+        }
+    }
 }
 
 .main-section-desserts{
@@ -460,54 +476,15 @@
     animation-delay: 0.5s;
     animation-duration: 2.5s;
     animation-fill-mode: forwards;
-}
-
-.section-entrees-title{
-    width: 100%;
-    height: 30px;
-    font-family: "roboto", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    position: relative;
-}
-
-.section-entrees-title-border{
-    position: absolute;
-    top: 23px;
-    width: 40px;
-    border: 2px solid #99E2D0;
-}
-
-.section-plats-title{
-    width: 100%;
-    height: 30px;
-    font-family: "roboto", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    position: relative;
-}
-
-.section-plats-title-border{
-    position: absolute;
-    top: 23px;
-    width: 40px;
-    border: 2px solid #99E2D0;
-}
-
-.section-desserts-title{
-    width: 100%;
-    height: 30px;
-    font-family: "roboto", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    position: relative;
-}
-
-.section-desserts-title-border{
-    position: absolute;
-    top: 23px;
-    width: 40px;
-    border: 2px solid #99E2D0;
+    &-title{
+        width: 100%;
+        height: 30px;
+        @include titreh3;
+        position: relative;
+        &-border{
+            @include borderBottomGreen;
+        }
+    }
 }
 
 .section-cards{
@@ -569,28 +546,37 @@
 
 
 
-                                                                        /* PAGE dACCUEIL */
+                                                    /* PAGE dACCUEIL BETWEEN 768PX AND 1023.99PX*/
+
+
+
 @media screen and (min-width: 768px) {
 
-                                                                        /* ANIMATIONS  */
+
+
+                                                    /* ANIMATIONS BETWEEN 768PX AND 1023.99PX*/
 
 
 
     .animation-chargement{
         height: 1465px;
         &-fork-knife{
-            height: 40%;
-            width: 25%;
-            margin-left: 37%;
+            margin-top: 25%;
+            width: 210px;
         }
         &-title{
-            top: 32%;
             font-size: 100px;
             &-text{
                 font-size: 60px;
             }
         }
     }
+
+
+
+                                                        /* ARTICLE BETWEEN 768PX AND 1023.99PX */
+
+
                                                                                                                        
     .article{
         width: 100%;
@@ -608,6 +594,11 @@
     .article-btn{
         margin: 0;
     }
+
+
+
+                                                    /* MAIN-FONCTIONNEMENT BETWEEN 768PX AND 1023.99PX */
+
 
 
     .main-fonctionnement{
@@ -630,6 +621,11 @@
         }
     }
 
+
+                                                /* MAIN-RESTAURANT BETWEEN 768PX AND 1023.99PX */
+
+
+
     .main-restaurants{
         width: 100%;
         #main-restaurants-title{
@@ -649,6 +645,12 @@
             }
         }
     }
+
+
+
+                                                    /* FOOTER BETWEEN 768PX AND 1023.99PX */
+
+
 
     .footer{
         width: 100%;
@@ -674,7 +676,7 @@
 
 
 
-                                                                        /* MENUS */
+                                                        /* MENUS BETWEEN 768PX AND 1023.99PX */
 
     .layout-title-la-note-enchantee{
         margin-top: 18px;
@@ -760,12 +762,11 @@
     .animation-chargement{
         height: 1465px;
         &-fork-knife{
-            width: 22%;
-            margin-left: 40%;
-            height: 50%;
+            margin-top: 15%;
+            width: 250px;
         }
         &-title{
-            top: 40%;
+
             &-text{
                 font-size: 80px;
             }

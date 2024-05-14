@@ -11,7 +11,7 @@
 }
 
 @mixin titreh1{
-    font-family: "Shrikhand";
+    font-family: "Shrikhand", sans-serif;
     font-size: 28px;
     font-style: italic;
     font-weight: 700;
@@ -19,19 +19,19 @@
 }
 
 @mixin titreh2{
-    font-family: "Roboto", sans-serif;
+    font-family: "shrikhand", sans-serif;
     font-weight: 700;
     font-size: 24px;
 }
 
 @mixin titreh3{
-    font-family: "Roboto", sans-serif;
+    font-family: "shrikhand", sans-serif;
     font-weight: 700;
     font-size: 18px;
 }
 
 @mixin titreh4{
-    font-family: "Roboto", sans-serif;
+    font-family: "shrikhand", sans-serif;
     font-weight: 500;
     font-size: 16px;
 }
@@ -40,4 +40,11 @@
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: 500;
+}
+
+@mixin borderBottomGreen{
+    position: absolute;
+    top: 23px;
+    width: 40px;
+    border: 2px solid #99E2D0;
 }
