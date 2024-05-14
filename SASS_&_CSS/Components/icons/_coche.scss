@@ -25,8 +25,19 @@
     & > .coche{
         width: 70px;
     }
-
 }
 
+@keyframes {
 
+    from{
+        opacity:0;
+        transform-origin: right;    
+        transform: translateX(0);
+    }
+
+    to{
+        transform:translateX(70px);
+        opacity: 1;
+    }
+}
 

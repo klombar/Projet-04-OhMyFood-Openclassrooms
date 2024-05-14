@@ -1,4 +1,4 @@
-                                                                        /* Heart Page d'accueil */
+                                                                /* Heart Page d'accueil */
 
 .heart{
     width: 22px;
@@ -12,27 +12,49 @@
     }
 }
 
+
+
+                                                            /* ANIMATION DU REMPLISSAGE DU COEUR */
+
+
+
 .regular-heart{
     position: absolute;
-    color: #b160db;
+    background-color: white;
     z-index: 1000;
 }
 
 .solid-heart{
     position: absolute;
     color: #b160db;
-    z-index: 2000;
-    opacity: 0;
+    z-index: 500;
+    opacity: 1;
     fill: url(#svg-gradient);
 }
 
-.solid-heart:active{
-    opacity: 1;
-    transition: 300ms ease;
+
+.regular-heart:hover{
+    animation-name: remplissage-coeur;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 
-                                                                        /* Heart Menu */
+@keyframes remplissage-coeur{
+
+    from{
+        z-index: 1000;
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+        z-index: 300;
+    }
+}
+
+
+                                                        /* POSITIONNEMENT DU COEUR DANS LES MENUS */
 
 .heart-menu{
     position: relative;

@@ -62,7 +62,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 2258px;
+    height: 100vh;
     background-color: black;
     z-index: 44687619874;
     animation-name: animation-chargement;
@@ -71,8 +71,8 @@
     animation-duration: 1.5s;
     &-fork-knife{
         position: sticky;
-        margin-top: 40%;
-        width: 180px;
+        margin-top: 25vh;
+        width: 150px;
         z-index: 487845648976867648;
         font-size: 30px;
         fill: url(#svg-gradient);
@@ -160,31 +160,27 @@
 
 .article{
     @include directionColumn;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     height: 280px;
     background: rgba(234, 234, 234, 0.5);
     &-title{
-        width: 100%;
-        height: 68px;
         font-family: 'shrikhand', sans-serif;
         text-align: center;
-        font-weight: 700;
         font-size: 24px;
-        margin: 40px 0 0 0;
+        margin: 0;
     }
     &-subtitle{
         text-align: center;
         width: 100%;
-        height: 46px;
         font-family: 'roboto', sans-serif;
-        font-weight: 300;
         font-size: 18px;
         margin-bottom: 10px;
     }
     &-btn{
         width: 218px;
         height: 50px;
-        margin-top: 20px;
     }
 }  
 
@@ -206,7 +202,8 @@
         display: flex;
         width: 91%;
         height: 31px;
-        @include titreh2;
+        font-family: "shrikhand", sans-serif;
+        font-size: 24px;
         margin-top: 50px
     }
     &-content{
@@ -250,12 +247,12 @@
             display: flex;
             justify-content: center;
             font-size: 16px;
+            font-family: "roboto", sans-serif;
             font-weight: 500;
-            @include titreh4
+            font-size: 16px;
         }
     }
 }
-
 
 
 
@@ -275,7 +272,8 @@
         display: flex;
         width: 91%;
         height: 31px;
-        @include titreh2;
+        font-family: "shrikhand", sans-serif;
+        font-size: 24px;
         margin-top: 50px
     }
     &-content{
@@ -344,11 +342,11 @@
             gap: 6px;
         }
         .cards-body-content-title{
-            @include titreh3;
+            font-family: "shrikhand", sans-serif;
+            font-size: 18px;
         }
         .cards-body-content-subtitle{
             font-family: "Roboto", sans-serif;
-            font-weight: 300;
             font-size: 17px;   
         }
     }
@@ -401,7 +399,10 @@
         &-title{
             display: flex;
             align-items: end;
-            @include titreh1;
+            font-family: "Shrikhand", sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            text-align: left;
             text-align: left;
             height: 100%;
             width: 93%;
@@ -427,10 +428,11 @@
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     &-title{
+        display: flex;
         width: 100%;
         height: 30px;
-        @include titreh3;
-        position: relative;
+        font-family: "shrikhand", sans-serif;
+        font-size: 16px;
         margin: 0;
         &-border{
             @include borderBottomGreen;
@@ -454,10 +456,11 @@
     animation-duration: 2s;
     animation-fill-mode: forwards;
     &-title{
+        display: flex;
         width: 100%;
         height: 30px;
-        @include titreh3;
-        position: relative;
+        font-family: "shrikhand", sans-serif;
+        font-size: 16px;
         margin: 0;
         &-border{
             @include borderBottomGreen;
@@ -481,11 +484,12 @@
     animation-duration: 2.5s;
     animation-fill-mode: forwards;
     &-title{
+        display: flex;
         width: 100%;
         height: 30px;
         margin: 0;
-        @include titreh3;
-        position: relative;
+        font-family: "shrikhand", sans-serif;
+        font-size: 16px;
         &-border{
             @include borderBottomGreen;
         }
@@ -513,13 +517,16 @@
         white-space: nowrap;
         width: 95%;
         .cards-content-title{
-            @include titreh3;
+            font-family: "shrikhand", sans-serif;
+            font-size: 18px;
             height: 20px;
             overflow: hidden;
             text-overflow: ellipsis;
         }
         .cards-content-subtitle{
             height: 20px;
+            font-size: 16px;
+            font-weight: 300;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -566,12 +573,10 @@
                                                     /* ANIMATIONS BETWEEN 768PX AND 1023.99PX*/
 
 
-
     .animation-chargement{
         height: 1465px;
-        &-fork-knife{
-            margin-top: 25%;
-            width: 210px;
+        .animation-chargement-fork-knife{
+            width: 150px;
         }
         &-title{
             font-size: 100px;
@@ -588,21 +593,21 @@
 
                                                                                                                        
     .article{
-        width: 100%;
         height: 280px;
+        gap: 20px;
+        .article-title{
+            font-size: 32px;
+        }
+        .article-subtitle{
+            width: 700px;
+        }  
     }
-                                                                
-    .article-title{
-        width: 700px;
-    }
-                                                                
-    .article-subtitle{
-        width: 700px;
-    }   
 
-    .article-btn{
-        margin: 0;
-    }
+    
+                                                                
+
+
+
 
 
 
@@ -770,9 +775,8 @@
 
     .animation-chargement{
         height: 1465px;
-        &-fork-knife{
-            margin-top: 15%;
-            width: 250px;
+        .animation-chargement-fork-knife{
+            width: 190px;
         }
         &-title{
 
@@ -808,7 +812,9 @@
     }
 
     .article{
-        width: 100%;
+        .article-title{
+            font-size: 40px;
+        }
     }
 
     .main-container{
@@ -818,7 +824,6 @@
     .main-fonctionnement{
         height: 230px;
         &-title{
-            width: 95%px;
         }
         &-content{
             display: flex;

@@ -10,32 +10,6 @@
     align-items: center;
 }
 
-@mixin titreh1{
-    font-family: "Shrikhand", sans-serif;
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 700;
-    text-align: left;
-}
-
-@mixin titreh2{
-    font-family: "shrikhand", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-@mixin titreh3{
-    font-family: "shrikhand", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-@mixin titreh4{
-    font-family: "shrikhand", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-
 @mixin footerLinkFont{
     font-family: "Roboto", sans-serif;
     font-size: 15px;
