@@ -1,3 +1,10 @@
+
+
+                /* Animation permettant de faire apparaitre la "coche" a droite des entrées/plats/desserts au survol de la souris  */
+
+
+
+
 .coche{
     @include directionRow;
     width: 0;
@@ -15,18 +22,6 @@
 
 
 .section-cards:hover{
-    
-    & > .cards-content{
-
-        & > .cards-content-title{
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        & > .cards-content-subtitle{
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
     & > .coche{
         width: 70px;
     }

@@ -211,6 +211,7 @@ img {
   font-size: 20px;
 }
 
+/* Animation permettant de faire apparaitre la "coche" a droite des entrées/plats/desserts au survol de la souris  */
 .coche {
   display: flex;
   justify-content: center;
@@ -228,14 +229,6 @@ img {
   overflow: hidden;
 }
 
-.section-cards:hover > .cards-content > .cards-content-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.section-cards:hover > .cards-content > .cards-content-subtitle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .section-cards:hover > .coche {
   width: 70px;
 }
@@ -351,7 +344,7 @@ img {
   height: 280px;
   background: rgba(234, 234, 234, 0.5);
 }
-.article .article-title {
+.article-title {
   width: 100%;
   height: 68px;
   font-family: "shrikhand", sans-serif;
@@ -360,7 +353,7 @@ img {
   font-size: 24px;
   margin: 40px 0 0 0;
 }
-.article .article-subtitle {
+.article-subtitle {
   text-align: center;
   width: 100%;
   height: 46px;
@@ -369,7 +362,7 @@ img {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.article .article-btn {
+.article-btn {
   width: 218px;
   height: 50px;
   margin-top: 20px;
@@ -464,7 +457,7 @@ img {
   font-size: 24px;
   margin-top: 50px;
 }
-.main-restaurants .main-restaurants-content {
+.main-restaurants-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,7 +465,7 @@ img {
   width: 91%;
   max-width: 700px;
 }
-.main-restaurants .main-restaurants-cards {
+.main-restaurants-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -481,14 +474,14 @@ img {
   z-index: 500;
   width: 100%;
 }
-.main-restaurants .main-restaurants-cards a {
+.main-restaurants-cards a {
   text-decoration: none;
   color: black;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.main-restaurants .main-restaurants-cards .restaurants-cards-badges {
+.main-restaurants-cards .restaurants-cards-badges {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -504,6 +497,7 @@ img {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 
 .restaurants-cards {
@@ -514,12 +508,12 @@ img {
   z-index: 500;
   position: relative;
 }
-.restaurants-cards .restaurants-cards-img {
+.restaurants-cards-img {
   width: 100%;
   height: 70%;
   border-radius: 15px 15px 0 0;
 }
-.restaurants-cards .restaurants-cards-body {
+.restaurants-cards-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -527,17 +521,17 @@ img {
   padding: 0px 10px 0px 10px;
   border-radius: 15px 15px 15px 15px;
 }
-.restaurants-cards .restaurants-cards-body .cards-body-content {
+.restaurants-cards-body .cards-body-content {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.restaurants-cards .restaurants-cards-body .cards-body-content-title {
+.restaurants-cards-body .cards-body-content-title {
   font-family: "shrikhand", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
-.restaurants-cards .restaurants-cards-body .cards-body-content-subtitle {
+.restaurants-cards-body .cards-body-content-subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 17px;
@@ -587,6 +581,7 @@ img {
   height: 100%;
   width: 93%;
   justify-content: space-between;
+  margin: 0;
 }
 
 .main-section-entrees {
@@ -612,6 +607,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   position: relative;
+  margin: 0;
 }
 .main-section-entrees-title-border {
   position: absolute;
@@ -643,6 +639,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   position: relative;
+  margin: 0;
 }
 .main-section-plats-title-border {
   position: absolute;
@@ -670,6 +667,7 @@ img {
 .main-section-desserts-title {
   width: 100%;
   height: 30px;
+  margin: 0;
   font-family: "shrikhand", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -709,9 +707,13 @@ img {
   font-weight: 700;
   font-size: 18px;
   height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .section-cards .cards-content .cards-content-subtitle {
   height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .section-cards .prix {
   display: flex;
