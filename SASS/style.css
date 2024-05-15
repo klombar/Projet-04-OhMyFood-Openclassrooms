@@ -224,8 +224,8 @@ img {
   position: relative;
   width: 22px;
   height: 21px;
-  top: -10px;
-  left: 20px;
+  top: -7px;
+  left: 17px;
 }
 .heart-menu i {
   font-size: 20px;
@@ -420,9 +420,7 @@ img {
   display: flex;
   width: 91%;
   height: 31px;
-  font-family: "shrikhand", sans-serif;
   font-size: 24px;
-  font-weight: 500;
   margin-top: 50px;
 }
 .main-fonctionnement-content {
@@ -504,9 +502,7 @@ img {
   display: flex;
   width: 91%;
   height: 31px;
-  font-family: "shrikhand", sans-serif;
   font-size: 24px;
-  font-weight: 500;
   margin-top: 50px;
 }
 .main-restaurants-content {
@@ -579,12 +575,10 @@ img {
   gap: 6px;
 }
 .restaurants-cards-body .cards-body-content-title {
-  font-family: "shrikhand", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
 }
 .restaurants-cards-body .cards-body-content-subtitle {
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 /* IMAGE DE LA CARTE DU RESTAURANT DE LA NOTE ENCHANTEE DE LA PAGE D'ACCUEIL */
@@ -653,8 +647,7 @@ img {
   display: flex;
   width: 100%;
   height: 30px;
-  font-family: "shrikhand", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
 }
 .main-section-entrees-title-border {
@@ -684,8 +677,7 @@ img {
   display: flex;
   width: 100%;
   height: 30px;
-  font-family: "shrikhand", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   margin: 0;
 }
 .main-section-plats-title-border {
@@ -716,8 +708,7 @@ img {
   width: 100%;
   height: 30px;
   margin: 0;
-  font-family: "shrikhand", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 .main-section-desserts-title-border {
   position: absolute;
@@ -740,7 +731,6 @@ img {
 .section-cards .cards-content {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   margin-bottom: 5px;
   padding-left: 10px;
   overflow: hidden;
@@ -749,15 +739,15 @@ img {
   width: 95%;
 }
 .section-cards .cards-content .cards-content-title {
-  font-family: "shrikhand", sans-serif;
-  font-size: 18px;
+  font-size: 11px;
   height: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 10px;
 }
 .section-cards .cards-content .cards-content-subtitle {
   height: 20px;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -766,9 +756,9 @@ img {
   display: flex;
   align-items: end;
   width: 27px;
-  height: 40px;
-  font-size: 15px;
-  font-weight: 700;
+  height: 31px;
+  font-size: 11px;
+  font-weight: 600;
   margin-right: 15px;
 }
 
@@ -903,6 +893,9 @@ img {
   }
   .section-cards {
     width: 100%;
+  }
+  .section-cards .cards-content-title {
+    font-size: 14px;
   }
   .section-cards:hover > .cards-content > .cards-content-title {
     text-overflow: ellipsis;
