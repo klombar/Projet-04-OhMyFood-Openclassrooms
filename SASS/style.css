@@ -125,6 +125,10 @@ h2, h3, h4, h5, h6 {
   font-weight: unset;
 }
 
+h1 {
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -190,19 +194,18 @@ img {
 /* ANIMATION DU REMPLISSAGE DU COEUR */
 .regular-heart {
   position: absolute;
-  background-color: white;
-  z-index: 1000;
+  z-index: 500;
 }
 
 .solid-heart {
   position: absolute;
   color: #b160db;
-  z-index: 500;
-  opacity: 1;
+  z-index: 1000;
+  opacity: 0;
   fill: url(#svg-gradient);
 }
 
-.regular-heart:hover {
+.solid-heart:hover {
   animation-name: remplissage-coeur;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -210,12 +213,10 @@ img {
 
 @keyframes remplissage-coeur {
   from {
-    z-index: 1000;
-    opacity: 1;
+    opacity: 0;
   }
   to {
-    opacity: 0;
-    z-index: 300;
+    opacity: 1;
   }
 }
 /* POSITIONNEMENT DU COEUR DANS LES MENUS */
@@ -252,17 +253,25 @@ img {
   width: 70px;
 }
 
-@keyframes {
-  from {
-    opacity: 0;
-    transform-origin: right;
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(70px);
-    opacity: 1;
-  }
+/*      TEST D'UN EQUIVALENT EN KEYFRAMES
+
+
+
+@keyframes coche{
+
+    from{
+        opacity:0;
+        transform-origin: right;    
+        transform: translateX(0);
+    }
+
+    to{
+        transform:translateX(70px);
+        opacity: 1;
+    }
 }
+
+*/
 /* MOBILE FIRST */
 /* PAGES D'ACCUEIL */
 /* ANIMATION AVEC @KEYFRAMES */
@@ -287,6 +296,10 @@ img {
     opacity: 0;
   }
 }
+.marge-droite {
+  margin-right: 10px;
+}
+
 .animation-chargement {
   display: flex;
   flex-direction: column;
@@ -409,6 +422,7 @@ img {
   height: 31px;
   font-family: "shrikhand", sans-serif;
   font-size: 24px;
+  font-weight: 500;
   margin-top: 50px;
 }
 .main-fonctionnement-content {
@@ -443,14 +457,28 @@ img {
   color: rgb(255, 255, 255);
   font-size: 14.18px;
 }
-.main-fonctionnement-nav-cygle {
+.main-fonctionnement-nav-cygle1 {
   display: flex;
   justify-content: center;
   font-size: 18px;
   height: 18px;
   margin: 0 8% 0 8%;
 }
-.main-fonctionnement-nav-cygle .fa-store {
+.main-fonctionnement-nav-cygle2 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  height: 18px;
+  margin: 0 12% 0 8%;
+}
+.main-fonctionnement-nav-cygle3 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  height: 18px;
+  margin: 0 10% 0 8%;
+}
+.main-fonctionnement-nav-cygle3 .fa-store {
   color: rgb(147, 86, 220);
 }
 .main-fonctionnement-nav-text {
@@ -478,6 +506,7 @@ img {
   height: 31px;
   font-family: "shrikhand", sans-serif;
   font-size: 24px;
+  font-weight: 500;
   margin-top: 50px;
 }
 .main-restaurants-content {
@@ -594,8 +623,8 @@ img {
   display: flex;
   align-items: end;
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 400;
   text-align: left;
   text-align: left;
   height: 100%;
@@ -722,7 +751,7 @@ img {
 .section-cards .cards-content .cards-content-title {
   font-family: "shrikhand", sans-serif;
   font-size: 18px;
-  height: 20px;
+  height: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -988,11 +1017,11 @@ img {
   .main-container-header {
     display: flex;
     justify-content: center;
-    width: 60%;
     margin-right: 40px;
   }
   .main-container-header-title {
     width: 100%;
+    font-size: 28px;
   }
   .main-section-entrees,
   .main-section-plats,
