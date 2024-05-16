@@ -203,22 +203,31 @@ img {
   z-index: 1000;
   opacity: 0;
   fill: url(#svg-gradient);
+  transition-property: opacity;
+  transition-duration: 0.5s;
 }
 
 .solid-heart:hover {
+  opacity: 1;
+  /*
   animation-name: remplissage-coeur;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  */
 }
 
-@keyframes remplissage-coeur {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/*
+@keyframes remplissage-coeur{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
+*/
 /* POSITIONNEMENT DU COEUR DANS LES MENUS */
 .heart-menu {
   position: relative;
@@ -575,7 +584,9 @@ img {
   gap: 6px;
 }
 .restaurants-cards-body .cards-body-content-title {
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
 }
 .restaurants-cards-body .cards-body-content-subtitle {
   font-size: 14px;
@@ -635,7 +646,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin: 30px 0 20px 0;
-  gap: 12px;
+  gap: 15px;
   transform: translateX(-100%);
   opacity: 0;
   animation-name: animation-plats;
@@ -647,12 +658,14 @@ img {
   display: flex;
   width: 100%;
   height: 30px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "roboto", sans-serif;
   margin: 0;
 }
 .main-section-entrees-title-border {
   position: absolute;
-  top: 23px;
+  top: 18px;
   width: 40px;
   border: 2px solid #99E2D0;
 }
@@ -665,7 +678,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin: 30px 0 20px 0;
-  gap: 12px;
+  gap: 15px;
   transform: translateX(-100%);
   opacity: 0;
   animation-name: animation-plats;
@@ -677,12 +690,14 @@ img {
   display: flex;
   width: 100%;
   height: 30px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "roboto", sans-serif;
   margin: 0;
 }
 .main-section-plats-title-border {
   position: absolute;
-  top: 23px;
+  top: 18px;
   width: 40px;
   border: 2px solid #99E2D0;
 }
@@ -695,7 +710,7 @@ img {
   flex-direction: column;
   align-items: center;
   margin: 30px 0 20px 0;
-  gap: 12px;
+  gap: 15px;
   transform: translateX(-100%);
   opacity: 0;
   animation-name: animation-plats;
@@ -708,11 +723,13 @@ img {
   width: 100%;
   height: 30px;
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "roboto", sans-serif;
 }
 .main-section-desserts-title-border {
   position: absolute;
-  top: 23px;
+  top: 18px;
   width: 40px;
   border: 2px solid #99E2D0;
 }
@@ -744,19 +761,24 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 10px;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 .section-cards .cards-content .cards-content-subtitle {
   height: 20px;
   font-size: 10px;
-  font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
 }
 .section-cards .prix {
   display: flex;
   align-items: end;
   width: 27px;
-  height: 31px;
+  height: 33px;
   font-size: 11px;
   font-weight: 600;
   margin-right: 15px;
@@ -817,9 +839,6 @@ img {
   }
   .main-fonctionnement-content-nav {
     width: 100%;
-  }
-  .main-fonctionnement-content-nav.main-fonctionnement-nav-cygle {
-    padding: 0;
   }
   /* MAIN-RESTAURANT BETWEEN 768PX AND 1023.99PX */
   .main-restaurants {

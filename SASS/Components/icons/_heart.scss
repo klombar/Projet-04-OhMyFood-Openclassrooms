@@ -29,16 +29,21 @@
     z-index: 1000;
     opacity: 0;
     fill: url(#svg-gradient);
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
 
 
 .solid-heart:hover{
+    opacity: 1;
+    /*
     animation-name: remplissage-coeur;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    */
 }
 
-
+/*
 @keyframes remplissage-coeur{
 
     from{
@@ -49,7 +54,7 @@
         opacity: 1;
     }
 }
-
+*/
 
                                                         /* POSITIONNEMENT DU COEUR DANS LES MENUS */
 

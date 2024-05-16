@@ -351,7 +351,9 @@
             gap: 6px;
         }
         .cards-body-content-title{
-            font-size: 15px;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: "roboto", sans-serif;
         }
         .cards-body-content-subtitle{
             font-size: 14px;   
@@ -427,7 +429,7 @@
     flex-direction: column;
     align-items: center;
     margin: 30px 0 20px 0;
-    gap: 12px;
+    gap: 15px;
     transform: translateX(-100%);
     opacity: 0;
     animation-name: animation-plats;
@@ -438,7 +440,9 @@
         display: flex;
         width: 100%;
         height: 30px;
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: "roboto", sans-serif;
         margin: 0;
         &-border{
             @include borderBottomGreen;
@@ -454,7 +458,7 @@
     flex-direction: column;
     align-items: center;
     margin: 30px 0 20px 0;
-    gap: 12px;
+    gap: 15px;
     transform: translateX(-100%);
     opacity: 0;
     animation-name: animation-plats;
@@ -465,7 +469,9 @@
         display: flex;
         width: 100%;
         height: 30px;
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: "roboto", sans-serif;
         margin: 0;
         &-border{
             @include borderBottomGreen;
@@ -481,7 +487,7 @@
     flex-direction: column;
     align-items: center;
     margin: 30px 0 20px 0;
-    gap: 12px;
+    gap: 15px;
     transform: translateX(-100%);
     opacity: 0;
     animation-name: animation-plats;
@@ -493,7 +499,9 @@
         width: 100%;
         height: 30px;
         margin: 0;
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: 300;
+        font-family: "roboto", sans-serif;
         &-border{
             @include borderBottomGreen;
         }
@@ -525,20 +533,25 @@
             overflow: hidden;
             text-overflow: ellipsis;
             margin-top: 10px;
+            font-family: "roboto", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
         }
         .cards-content-subtitle{
             height: 20px;
             font-size: 10px;
-            font-weight: 300;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-family: "roboto", sans-serif;
+            font-size: 14px;
+            font-weight: 300;
         }
     }
     .prix{
         display: flex;
         align-items: end;
         width: 27px;
-        height: 31px;
+        height: 33px;
         font-size: 11px;
         font-weight: 600;
         margin-right: 15px;
@@ -631,9 +644,6 @@
             width: 93%;
             &-nav{
                 width: 100%;
-                &.main-fonctionnement-nav-cygle{
-                    padding: 0;
-                }
             }
         }
     }
