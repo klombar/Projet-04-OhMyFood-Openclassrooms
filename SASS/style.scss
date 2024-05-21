@@ -18,9 +18,6 @@
 
 
 
-
-
-
                                                     /* ANIMATION AVEC @KEYFRAMES */
 
 
@@ -43,33 +40,54 @@
 @keyframes animation-chargement-fork-knife{
 
     0%{
-        z-index: 454545454545454545454545454545;
+
         transform: rotate(0);
     }
 
     100%{
-        transform: rotate(1080deg);
+        transform: rotate(720deg);
         z-index: -2;
         opacity: 0;
     }
 }
 
 
-.marge-droite{
-    margin-right: 10px;
-}
+
+                                    /* ANIMATTIONS DES ENTREES, PLATS, DESSERT DANS LES MENUS */ 
+
+
+
+
+@keyframes animation-plats{
+
+    0%{
+        transform:translateX(-100%);
+        opacity: 0;
+        }
+                                                                                
+    30%{
+        opacity: 0.4;
+        }
+                                                                                
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+        }
+    }
+                                    
+                                    
+                                                    /* FIN DE L'ANIMATION DE LA COCHE */
+
 
 
 
 .animation-chargement{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include directionColumn;
     position: fixed;
     width: 100%;
     height: 100vh;
     background-color: black;
-    z-index: 44687619874;
+    z-index: 10000;
     animation-name: animation-chargement;
     animation-fill-mode: forwards;
     animation-delay: 1s;
@@ -78,7 +96,7 @@
         position: sticky;
         margin-top: 25vh;
         width: 150px;
-        z-index: 487845648976867648;
+        z-index: 15000;
         font-size: 30px;
         fill: url(#svg-gradient);
         opacity: 1;
@@ -88,10 +106,8 @@
         animation-fill-mode: forwards;
     }
     &-title{
-        display: flex;
-        justify-content: center;
+        @include directionRow;
         margin-top: 40px;
-        width: 100%;
         text-align: center;
         padding: 20px;
         &-text{
@@ -109,52 +125,19 @@
 }
 
 
-                                            /* FIN DES ANIMATIONS AU CHARGEMENT DE LA PAGE D'ACCUEIL */
-
-
-
-
-                                            /* ANIMATTIONS DES ENTREES, PLATS, DESSERT DANS LES MENUS */ 
-
-
-@keyframes animation-plats{
-
-    0%{
-        transform:translateX(-100%);
-        opacity: 0;
-    }
-
-    30%{
-        opacity: 0.4;
-    }
-
-    100%{
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
-
                                                         /* FIN DES ANIMATIONS DES MENUS */
 
 
 
 
-
-
-
 #main-menu{
-    display: flex;
+    @include directionRow;
     height: 1100px;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .main{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include directionColumn;
 }
 
 
@@ -204,15 +187,13 @@
     height: 460px;
     width: 100%;
     &-title{
-        display: flex;
         width: 91%;
         height: 31px;
         font-size: 24px;
         margin-top: 50px
     }
     &-content{
-        display: flex;
-        flex-direction: column;
+        @include directionColumn;
         gap: 20px;
         width: 86%;
     }
@@ -254,12 +235,9 @@
             }
         }
         &-text{
-            display: flex;
-            justify-content: center;
+            @include directionRow;
             font-size: 16px;
-            font-family: "roboto", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
+            padding-right: 10px
         }
     }
 }
@@ -279,7 +257,6 @@
     padding-bottom: 50px;
     width: 100%;
     #main-restaurants-title{
-        display: flex;
         width: 91%;
         height: 31px;
         font-size: 24px;
@@ -301,26 +278,7 @@
             text-decoration:none;
             color: black;
             width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-    .restaurants-cards-badges{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        width: 80px;
-        height: 29px;
-        top: 8px;
-        right: 10px;
-        background-color: $tertiary-color;
-        color: rgba(0, 135, 102, 1);
-        border-radius: 2px;
-        z-index: 800;
-        font-family: "roboto", sans-serif;
-        font-weight: 500;
-        font-size: 14px;
-        box-shadow: 0px 2px 4px 0px #00000026;
+            @include directionRow;
         }
     }
 }
@@ -332,6 +290,20 @@
     border-radius: 0 0 15px 15px;
     z-index: 500;
     position: relative;
+    &-badges{
+        @include directionRow;
+        position: absolute;
+        width: 80px;
+        height: 29px;
+        top: 8px;
+        right: 10px;
+        background-color: $tertiary-color;
+        color: rgba(0, 135, 102, 1);
+        border-radius: 2px;
+        z-index: 800;
+        font-size: 14px;
+        box-shadow: 0px 2px 4px 0px #00000026;
+        }
     &-img{
         width: 100%;
         height: 70%;
@@ -352,7 +324,6 @@
         }
         .cards-body-content-title{
             font-size: 18px;
-            font-weight: 700;
             font-family: "roboto", sans-serif;
         }
         .cards-body-content-subtitle{
@@ -362,17 +333,7 @@
 }
 
 
-                                /* IMAGE DE LA CARTE DU RESTAURANT DE LA NOTE ENCHANTEE DE LA PAGE D'ACCUEIL */
 
-
-
-
-.restaurant-cards-img-lanoteenchanté{
-    width: 100%;
-    height: 70%;
-    border-radius: 15px 15px 0 0;
-
-}
 
 
 
@@ -392,9 +353,7 @@
 }
 
 .main-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include directionColumn;
     width: 100%;
     height: 1335px;
     background-color: white;
@@ -409,9 +368,8 @@
             display: flex;
             align-items: end;
             font-family: "Shrikhand", sans-serif;
-            font-size: 22px;
+            font-size: 28px;
             font-weight: 400;
-            text-align: left;
             text-align: left;
             height: 100%;
             width: 93%;
@@ -421,13 +379,17 @@
     }
 }
 
+
+
+
+
+
+
 .main-section-entrees{
+    @include directionColumn;
     width: 88%;
     max-width: 634px;
     height: 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 30px 0 20px 0;
     gap: 15px;
     transform: translateX(-100%);
@@ -454,9 +416,7 @@
     width: 88%;
     max-width: 634px;
     height: 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include directionColumn;
     margin: 30px 0 20px 0;
     gap: 15px;
     transform: translateX(-100%);
@@ -483,9 +443,7 @@
     width: 88%;
     max-width: 634px;
     height: 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include directionColumn;
     margin: 30px 0 20px 0;
     gap: 15px;
     transform: translateX(-100%);
@@ -533,9 +491,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             margin-top: 10px;
-            font-family: "roboto", sans-serif;
             font-size: 16px;
-            font-weight: 500;
         }
         .cards-content-subtitle{
             height: 20px;
@@ -552,15 +508,36 @@
         align-items: end;
         width: 27px;
         height: 33px;
-        font-size: 11px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 700;
         margin-right: 15px;
+    }
+}
+
+.section-cards:hover{
+    & > .cards-content{
+        & > .cards-content-title{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        & > .cards-content-subtitle{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 }
 
 .main-btn{
     margin: 20px 0px 40px 0px;
 }
+
+
+
+                                                        /* MENU LA NOTE ENCHANTEE UNDER 768PX*/
+
+
 
 .note-enchantee-main-layout{
     height: 1415px;
@@ -571,8 +548,20 @@
 }
 
 
+                                    /* IMAGE DE LA CARTE DU RESTAURANT DE LA NOTE ENCHANTEE DE LA PAGE D'ACCUEIL */
 
-                                                        /* MEDIA QUERIES tablet BETWEEN 768px and 1023.99px */
+
+
+
+.restaurant-cards-img-lanoteenchanté{
+    width: 100%;
+    height: 70%;
+    border-radius: 15px 15px 0 0;
+}
+
+
+
+                                                /* MEDIA QUERIES tablet BETWEEN 768px and 1023.99px */
 
 
 
@@ -619,13 +608,6 @@
         }  
     }
 
-    
-                                                                
-
-
-
-
-
 
                                                     /* MAIN-FONCTIONNEMENT BETWEEN 768PX AND 1023.99PX */
 
@@ -648,6 +630,24 @@
         }
     }
 
+
+    .main-fonctionnement-nav-cygle1,
+    .main-fonctionnement-nav-cygle2,
+    .main-fonctionnement-nav-cygle3{
+        margin: 0 10% 0 12%;
+    }
+
+    .main-fonctionnement{
+        &-content{
+            &-nav{
+                &-cygle1,
+                &-cygle2,
+                &-cygle3{
+                    margin: 0 5% 0 8%;
+                }
+            }
+        }
+    }
 
                                                 /* MAIN-RESTAURANT BETWEEN 768PX AND 1023.99PX */
 
@@ -680,16 +680,15 @@
 
 
     .footer{
-        width: 100%;
-        justify-content: end;
-        height: 150px;
         display: flex;
-        align-items: end;
         flex-direction: row-reverse;
-        gap: 16px;
-        padding-bottom: 20px;
+        justify-content: end;
+        align-items: end;
         position: relative;
-        padding-right: 1vw;
+        width: 100%;
+        height: 150px;
+        gap: 16px;
+        padding: 0 1vw 20px 0;
     }
 
     .footer-logo{
@@ -710,10 +709,7 @@
     }
 
     .main-la-note-enchantee{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include directionRow;
         height: 1175px;
     }
 
@@ -727,6 +723,7 @@
     .main-container-header-title{
         width: 100%;
         justify-content: center;
+        font-size: 28px;
     }
 
     .section-entrees-title,
@@ -750,27 +747,8 @@
         }
     }
 
-    .section-cards:hover{
-        & > .cards-content{
-            & > .cards-content-title{
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-    
-            }
-            & > .cards-content-subtitle{
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;
-    
-            }
-        }
-    }
-
     .note-enchantee-main-layout{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include directionColumn;
         width: 100%;
         max-width: 805.59px;
         height: 1300px;
@@ -850,17 +828,20 @@
             width: 93%;
             max-width: 1055px;
             gap: 30px;
-        }
-        &-nav{
-            width: 100%;
-            justify-content: start;
-            padding-left: 40px;
-            &-cygle{
-                margin: 0 10% 0 0;
+            &-nav{
+                width: 100%;
+                justify-content: start;
+                padding-left: 40px;
             }
         }
     }
 
+    .main-fonctionnement-nav-cygle1,
+    .main-fonctionnement-nav-cygle2,
+    .main-fonctionnement-nav-cygle3{
+        margin: 0 8% 0 6%;
+    }
+    
     .note-enchantee-main-layout{
         max-width: 1055px;
     }
@@ -904,7 +885,7 @@
 
     .main-container-header-title{
         width: 100%;
-        font-size: 28px;
+
     }
 
     .main-section-entrees,
@@ -913,24 +894,5 @@
         width: 79%;
         max-width: 634px;
     }
-
-    .section-cards:hover{
-        & > .cards-content{
     
-            & > .cards-content-title{
-                width: 240px;
-                height: 19px;
-                overflow: unset;
-                text-overflow: unset;
-                white-space: nowrap;
-            }
-            & > .cards-content-subtitle{
-                width: 240px;
-                height: 19px;
-                overflow: unset;
-                text-overflow: unset;
-                white-space: nowrap;
-            }
-        }
-    }
 }

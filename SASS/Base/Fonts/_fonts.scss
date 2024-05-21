@@ -4,14 +4,12 @@
     text-align: left;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1{
     font-family: "shrikhand", sans-serif;
+    font-weight: 400;
 }
 
 h2,h3,h4,h5,h6{
-    font-weight: unset;
-}
-
-h1{
-    font-weight: 400;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
 }

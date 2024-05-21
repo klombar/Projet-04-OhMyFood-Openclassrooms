@@ -14,6 +14,24 @@
 
 
 
+
+
+                                                       /* POSITIONNEMENT DU COEUR DANS LES MENUS */
+
+
+
+.heart-menu{
+    position: relative;
+    width: 22px;
+    height: 21px;
+    top: -8px;
+    left: 17px;
+    & i{
+        font-size: 20px;
+    }
+}
+                                                    
+
                                                             /* ANIMATION DU REMPLISSAGE DU COEUR */
 
 
@@ -31,41 +49,7 @@
     fill: url(#svg-gradient);
     transition-property: opacity;
     transition-duration: 0.5s;
-}
-
-
-.solid-heart:hover{
-    opacity: 1;
-    /*
-    animation-name: remplissage-coeur;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    */
-}
-
-/*
-@keyframes remplissage-coeur{
-
-    from{
-        opacity: 0;
-    }
-
-    to{
+    &:hover{
         opacity: 1;
     }
 }
-*/
-
-                                                        /* POSITIONNEMENT DU COEUR DANS LES MENUS */
-
-.heart-menu{
-    position: relative;
-    width: 22px;
-    height: 21px;
-    top: -7px;
-    left: 17px;
-    & i{
-        font-size: 20px;
-    }
-}
-
