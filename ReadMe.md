@@ -1,4 +1,6 @@
-![ohmyfood](https://github.com/user-attachments/assets/d90da454-697c-4178-b9f2-3b49e40002cb)
+<p align="center">
+  <img src="[https://i.imgur.com/ExempleImage.png](https://github.com/user-attachments/assets/d90da454-697c-4178-b9f2-3b49e40002cb)" alt="Bannière du projet" width="100%" />
+</p>
 
 # Projet OhMyFood - Développement d'un site de réservation de menus gastronomiques
 
