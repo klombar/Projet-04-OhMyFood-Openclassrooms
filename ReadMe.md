@@ -1,3 +1,5 @@
+![ohmyfood](https://github.com/user-attachments/assets/d90da454-697c-4178-b9f2-3b49e40002cb)
+
 # Projet OhMyFood - Développement d'un site de réservation de menus gastronomiques
 
 ### Contexte
